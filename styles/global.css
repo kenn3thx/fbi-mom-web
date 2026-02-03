@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Design tokens */
+@import "./theme/tokens.css";
+@import "./theme/light.css";
+@import "./theme/dark.css";
+
+@layer components {
+  /* Blog Content Styles */
+  .prose {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-bold mt-8 mb-4 text-gray-900;
+  }
+
+  .prose h3 {
+    @apply text-2xl font-bold mt-6 mb-3 text-gray-900;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc list-inside mb-4 space-y-2;
+  }
+
+  .prose ol {
+    @apply list-decimal list-inside mb-4 space-y-2;
+  }
+
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+  }
+
+  .prose code {
+    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+  }
+
+  .prose pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+  }
+}
+
+@layer utilities {
+  .font-sans {
+    font-family: var(--font-inter);
+  }
+
+  .font-serif {
+    font-family: var(--font-playfair);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBI Mom – Smart Parental Control App to Protect Kids Online</title>
+    <meta name="description" content="FBI Mom is a powerful parental control app helping moms monitor screen time, block harmful content, and keep children safe online.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍👦</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6a5acd;
+            --secondary-color: #ff7bac;
+            --accent-color: #5ac8fa;
+            --light-color: #f8f7ff;
+            --dark-color: #333344;
+        }
+        
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f7ff 0%, #e6e5ff 100%);
+        }
+        
+        .primary-gradient {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 90, 205, 0.3);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .step-container {
+            position: relative;
+        }
+        
+        .step-container:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            right: -30px;
+            width: 40px;
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236a5acd' viewBox='0 0 24 24'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        @media (max-width: 768px) {
+            .step-container:not(:last-child):after {
+                display: none;
+            }
+        }
+        
+        .faq-item {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(106, 90, 205, 0.05);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .faq-answer.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="text-gray-800 gradient-bg">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold" style="color: var(--primary-color);">FBI Mom</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="font-medium hover:text-purple-600 transition">Features</a>
+                <a href="#how-it-works" class="font-medium hover:text-purple-600 transition">How It Works</a>
+                <a href="#testimonials" class="font-medium hover:text-purple-600 transition">Testimonials</a>
+                <a href="#faq" class="font-medium hover:text-purple-600 transition">FAQ</a>
+            </div>
+            
+            <div>
+                <a href="#cta" class="btn-primary text-white font-semibold py-3 px-6 rounded-full shadow-lg">Get Started</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 py-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#features" class="font-medium hover:text-purple-600 transition">Features</a>
+                <a href="#how-it-works" class="font-medium hover:text-purple-600 transition">How It Works</a>
+                <a href="#testimonials" class="font-medium hover:text-purple-600 transition">Testimonials</a>
+                <a href="#faq" class="font-medium hover:text-purple-600 transition">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium mb-6">
+                        <i class="fas fa-star mr-2"></i> Trusted by 50,000+ moms worldwide
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" style="color: var(--dark-color);">
+                        Smart Parental Control App to Protect Your Child Online
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 mb-8">
+                        FBI Mom empowers moms to monitor screen time, block harmful content, and guide children safely through the digital world — all in one simple app.
+                    </p>
+                    
+                    <div class="mb-10">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span class="text-lg">Monitor your child's phone activity</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span class="text-lg">Block unsafe apps & websites</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span class="text-lg">Control screen time effortlessly</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span class="text-lg">Get real-time safety alerts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span class="text-lg">Designed for moms, not tech experts</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#cta" class="btn-primary text-white font-bold py-4 px-8 rounded-full text-center text-lg shadow-xl">
+                            <i class="fas fa-shield-alt mr-2"></i> Start Protecting My Child Now
+                        </a>
+                        <a href="#how-it-works" class="bg-white text-purple-700 font-bold py-4 px-8 rounded-full text-center text-lg border-2 border-purple-200 hover:border-purple-400 transition">
+                            <i class="fas fa-play-circle mr-2"></i> See How It Works
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full primary-gradient flex items-center justify-center floating">
+                            <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                                <div class="text-center p-6">
+                                    <div class="text-6xl mb-4">👩‍👦</div>
+                                    <h3 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">FBI Mom</h3>
+                                    <p class="text-gray-600">Parental Control App</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="absolute -top-4 left-0 bg-white p-4 rounded-2xl shadow-xl" style="animation-delay: 0.5s;">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-clock text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Screen Time</p>
+                                    <p class="text-sm text-gray-500">Managed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 right-0 bg-white p-4 rounded-2xl shadow-xl" style="animation-delay: 1s;">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-ban text-red-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Harmful Content</p>
+                                    <p class="text-sm text-gray-500">Blocked</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Trusted by Parents Who Care About Digital Safety</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-purple-50 p-8 rounded-2xl">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-lg italic mb-6">"Finally an app made for moms, not engineers. I can actually understand how to use it and it gives me peace of mind."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Sarah J.</p>
+                            <p class="text-sm text-gray-500">Mom of 2</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-pink-50 p-8 rounded-2xl">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-lg italic mb-6">"I feel confident letting my child use a phone again. FBI Mom helps me set healthy boundaries without constant arguments."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-pink-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Maria L.</p>
+                            <p class="text-sm text-gray-500">Mom of 3</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-2xl">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-lg italic mb-6">"Simple, powerful, and actually works. The real-time alerts have helped me catch potential issues before they became problems."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Jessica T.</p>
+                            <p class="text-sm text-gray-500">Mom of 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="trust-badge p-4 rounded-xl shadow-md flex items-center">
+                    <i class="fab fa-apple text-3xl mr-3 text-gray-800"></i>
+                    <div>
+                        <p class="font-bold">App Store</p>
+                        <p class="text-sm text-gray-600">4.9/5 Rating</p>
+                    </div>
+                </div>
+                
+                <div class="trust-badge p-4 rounded-xl shadow-md flex items-center">
+                    <i class="fab fa-google-play text-3xl mr-3 text-green-600"></i>
+                    <div>
+                        <p class="font-bold">Google Play</p>
+                        <p class="text-sm text-gray-600">4.8/5 Rating</p>
+                    </div>
+                </div>
+                
+                <div class="trust-badge p-4 rounded-xl shadow-md flex items-center">
+                    <i class="fas fa-lock text-3xl mr-3 text-blue-600"></i>
+                    <div>
+                        <p class="font-bold">Privacy-first</p>
+                        <p class="text-sm text-gray-600">GDPR-ready</p>
+                    </div>
+                </div>
+                
+                <div class="trust-badge p-4 rounded-xl shadow-md flex items-center">
+                    <i class="fas fa-shield-alt text-3xl mr-3 text-purple-600"></i>
+                    <div>
+                        <p class="font-bold">Secure Encryption</p>
+                        <p class="text-sm text-gray-600">Bank-level security</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Awareness -->
+    <section id="features" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Children Are at Risk Online Today</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-exclamation-triangle text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Inappropriate Content</h3>
+                    </div>
+                    <p class="text-gray-600">Children can accidentally access inappropriate content while browsing or watching videos, exposing them to material they're not emotionally ready for.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-orange-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Stranger Danger</h3>
+                    </div>
+                    <p class="text-gray-600">Social media exposes kids to strangers who may have harmful intentions, with predators often pretending to be other children or friendly adults.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-bed text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Sleep & Learning Impact</h3>
+                    </div>
+                    <p class="text-gray-600">Excessive screen time affects sleep patterns, concentration, and learning abilities, with blue light disrupting natural sleep cycles.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user-times text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Parental Control Gap</h3>
+                    </div>
+                    <p class="text-gray-600">Parents often feel outdated and out of control when it comes to their children's online activities, creating anxiety and communication gaps.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-2xl text-center">
+                <h3 class="text-2xl font-bold mb-4">FBI Mom was built to solve these problems — without invading your child's trust.</h3>
+                <p class="text-gray-700">We believe in protection through guidance, not punishment. Our app promotes open conversations about online safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">How FBI Mom Protects Your Child</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+                    <div class="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Screen Time Monitoring</h3>
+                    <p class="text-gray-600 mb-6">Track how much time your child spends on apps and devices. Set daily limits and get detailed reports on their digital habits.</p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+                    <div class="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-ban text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">App & Website Blocking</h3>
+                    <p class="text-gray-600 mb-6">Block unsafe apps and inappropriate websites instantly. Create custom blocklists or use our pre-configured safety categories.</p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+                    <div class="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bell text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Real-Time Alerts</h3>
+                    <p class="text-gray-600 mb-6">Get notified when risky behavior is detected. Receive alerts for inappropriate content, excessive usage, or attempted blocked site access.</p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+                    <div class="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Kid-Friendly Boundaries</h3>
+                    <p class="text-gray-600 mb-6">Set rules without spying or creating conflict. Our approach encourages responsibility and healthy digital habits.</p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+                    <div class="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Simple Setup in Minutes</h3>
+                    <p class="text-gray-600 mb-6">No technical skills needed — made for busy moms. Get up and running in less than 5 minutes with our step-by-step guide.</p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+                    <div class="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Family Communication Tools</h3>
+                    <p class="text-gray-600 mb-6">Promote open dialogue with built-in conversation starters about online safety and responsible digital citizenship.</p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">How FBI Mom Works in 3 Simple Steps</h2>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16">
+                <div class="step-container md:w-1/3 p-8 text-center">
+                    <div class="w-24 h-24 primary-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-4xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Install FBI Mom</h3>
+                    <p class="text-gray-600">Download FBI Mom on your phone from the App Store or Google Play. The app is free to install with a 14-day trial.</p>
+                </div>
+                
+                <div class="step-container md:w-1/3 p-8 text-center">
+                    <div class="w-24 h-24 primary-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-4xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Connect Devices</h3>
+                    <p class="text-gray-600">Securely connect your child's device using our simple pairing process. No complex settings or technical knowledge required.</p>
+                </div>
+                
+                <div class="step-container md:w-1/3 p-8 text-center">
+                    <div class="w-24 h-24 primary-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-4xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Monitor & Guide</h3>
+                    <p class="text-gray-600">Monitor, guide, and protect — in real time. Set boundaries, review activity, and receive alerts all from your dashboard.</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#cta" class="btn-primary text-white font-bold py-4 px-12 rounded-full text-lg inline-block shadow-xl">
+                    <i class="fas fa-play-circle mr-2"></i> Try FBI Mom Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Who Is FBI Mom For?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-6">👩‍👧</div>
+                    <h3 class="text-xl font-bold mb-4">Moms with kids aged 6–16</h3>
+                    <p class="text-gray-600">Perfect for children starting to explore the digital world up to teenagers needing responsible boundaries.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-6">📱</div>
+                    <h3 class="text-xl font-bold mb-4">First smartphone families</h3>
+                    <p class="text-gray-600">Essential for families giving kids their first smartphone, establishing healthy habits from day one.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-6">🏫</div>
+                    <h3 class="text-xl font-bold mb-4">Worried parents</h3>
+                    <p class="text-gray-600">For parents concerned about online dangers but unsure how to protect their children effectively.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-6">❤️</div>
+                    <h3 class="text-xl font-bold mb-4">Trust-building moms</h3>
+                    <p class="text-gray-600">For moms who want safety without control battles, fostering trust and open communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Ethics -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Privacy-First & Child-Respecting Monitoring</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-start mb-8">
+                        <i class="fas fa-lock text-3xl text-green-600 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">No selling child data</h3>
+                            <p class="text-gray-600">We never sell or share your child's data with third parties. Your family's privacy is our top priority.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-8">
+                        <i class="fas fa-shield-alt text-3xl text-blue-600 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Encrypted communication</h3>
+                            <p class="text-gray-600">All data is encrypted with bank-level security, ensuring that your family's information stays private.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-8">
+                        <i class="fas fa-eye text-3xl text-purple-600 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Transparent permissions</h3>
+                            <p class="text-gray-600">We explain exactly what data we collect and why, with clear options for parents to control privacy settings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <i class="fas fa-brain text-3xl text-pink-600 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Child psychology in mind</h3>
+                            <p class="text-gray-600">Designed with child development experts to promote healthy digital habits, not fear-based monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-10 rounded-3xl text-center">
+                    <div class="text-7xl mb-6">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-6">"Protection without punishment."</h3>
+                    <p class="text-gray-700 text-lg mb-8">Our philosophy centers on guiding children to make smart choices online, rather than punishing them for mistakes. We believe in teaching digital responsibility.</p>
+                    <div class="inline-block px-6 py-3 bg-white rounded-full font-bold text-purple-700 shadow-md">
+                        <i class="fas fa-quote-left mr-2"></i> Ethical Monitoring
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 px-4 primary-gradient">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Your Child's Safety Can't Wait</h2>
+            <p class="text-xl text-white opacity-90 mb-12 max-w-2xl mx-auto">Join thousands of moms protecting their children online today. Start with a free 14-day trial, no credit card required.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8 mb-12">
+                <a href="#" class="bg-white text-purple-700 font-bold py-5 px-10 rounded-full text-lg shadow-2xl hover:bg-gray-100 transition">
+                    <i class="fas fa-play-circle mr-2"></i> Start Free Trial
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-5 px-10 rounded-full text-lg hover:bg-white hover:text-purple-700 transition">
+                    <i class="fas fa-download mr-2"></i> Download FBI Mom
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-5 px-10 rounded-full text-lg hover:bg-white hover:text-purple-700 transition">
+                    <i class="fas fa-calendar-alt mr-2"></i> Get Early Access
+                </a>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-8 text-white">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-2xl mr-3"></i>
+                    <span>14-day free trial</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-2xl mr-3"></i>
+                    <span>No credit card required</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-2xl mr-3"></i>
+                    <span>Cancel anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="faq-item border border-gray-200">
+                    <div class="faq-question p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Is FBI Mom safe to use?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="faq-answer p-6 pt-0 bg-gray-50">
+                        <p class="text-gray-600">Yes, FBI Mom uses bank-level encryption and privacy-first design. We're compliant with GDPR, COPPA, and other privacy regulations to ensure your child's data is protected with the highest security standards.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border border-gray-200">
+                    <div class="faq-question p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Can my child know about the monitoring?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="faq-answer p-6 pt-0 bg-gray-50">
+                        <p class="text-gray-600">Absolutely. FBI Mom promotes open communication and trust. We provide conversation guides to help parents explain why online safety matters. Many parents find that being transparent about monitoring actually strengthens their relationship with their child.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border border-gray-200">
+                    <div class="faq-question p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Does it work on Android & iOS?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="faq-answer p-6 pt-0 bg-gray-50">
+                        <p class="text-gray-600">Yes, FBI Mom supports both Android and iOS platforms. The parent app works on both platforms, and you can monitor children's devices regardless of the operating system they use.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border border-gray-200">
+                    <div class="faq-question p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Is this better than other parental control apps?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="faq-answer p-6 pt-0 bg-gray-50">
+                        <p class="text-gray-600">FBI Mom is designed specifically for moms — simpler, clearer, and more ethical than many technical solutions. We focus on the parent-child relationship rather than just surveillance, with tools designed to foster trust and teach responsible digital citizenship.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">Have more questions? We're here to help.</p>
+                <a href="#" class="inline-block border-2 border-purple-600 text-purple-600 font-bold py-3 px-8 rounded-full hover:bg-purple-600 hover:text-white transition">
+                    <i class="fas fa-question-circle mr-2"></i> Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 primary-gradient rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">FBI Mom</span>
+                    </div>
+                    <p class="text-gray-400">Protecting children in the digital world with smart, ethical parental controls designed for modern families.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Download</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Child Safety Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Screen Time Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Parenting Webinars</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">GDPR Compliance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 FBI Mom. All rights reserved.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>FBI Mom is a parental control app designed to help parents monitor and guide their children's online activities. It should be used as part of a comprehensive approach to digital safety that includes open communication and education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (icon.classList.contains('fa-chevron-down')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Observe testimonial cards
+        document.querySelectorAll('.faq-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

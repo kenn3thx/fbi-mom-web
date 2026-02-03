@@ -1,0 +1,9 @@
+.dark {
+  --color-bg: oklch(0.15 0 0);
+  --color-surface: oklch(0.2 0 0);
+  --color-text: oklch(0.98 0 0);
+  --color-muted: oklch(0.7 0 0);
+
+  --color-primary: oklch(0.7 0.16 245);
+  --color-primary-foreground: oklch(0.1 0 0);
+}

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FBI Mom – Our Mission to Protect Children Online | Parental Control App</title>
+    <meta name="description" content="Learn about FBI Mom's mission to protect children online. Founded by a mom and tech expert, we create simple, ethical parental controls for modern families.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍👦</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6a5acd;
+            --secondary-color: #ff7bac;
+            --accent-color: #5ac8fa;
+            --light-color: #f8f7ff;
+            --dark-color: #333344;
+        }
+        
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f7ff 0%, #e6e5ff 100%);
+        }
+        
+        .primary-gradient {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        
+        .secondary-gradient {
+            background: linear-gradient(90deg, var(--secondary-color), #ff9e7d);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 90, 205, 0.3);
+        }
+        
+        .story-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(106, 90, 205, 0.15);
+        }
+        
+        .team-card {
+            transition: transform 0.3s ease;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .timeline-container {
+            position: relative;
+        }
+        
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--primary-color);
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-container:before {
+                left: 30px;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+        }
+        
+        .value-card {
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card {
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800 gradient-bg">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="/" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold" style="color: var(--primary-color);">FBI Mom</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="font-medium hover:text-purple-600 transition">Home</a>
+                <a href="/about-us" class="font-medium hover:text-purple-600 transition">About</a>
+                <a href="#mission" class="font-medium hover:text-purple-600 transition">Mission</a>
+                <a href="#team" class="font-medium hover:text-purple-600 transition">Team</a>
+                <a href="/contact-us" class="font-medium hover:text-purple-600 transition">Contact</a>
+            </div>
+            
+            <div>
+                <a href="/" class="btn-primary text-white font-semibold py-3 px-6 rounded-full shadow-lg">Back to Home</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 py-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="/" class="font-medium hover:text-purple-600 transition">Home</a>
+                <a href="/about-us" class="font-medium hover:text-purple-600 transition">About</a>
+                <a href="#mission" class="font-medium hover:text-purple-600 transition">Mission</a>
+                <a href="#team" class="font-medium hover:text-purple-600 transition">Team</a>
+                <a href="/contact-us" class="font-medium hover:text-purple-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium mb-6">
+                        <i class="fas fa-heart mr-2"></i> Our Story
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" style="color: var(--dark-color);">
+                        Protecting Children in the Digital World
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 mb-8">
+                        FBI Mom was founded by a mother and tech expert who saw the need for simple, ethical parental controls that empower families rather than create conflict.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#story" class="btn-primary text-white font-bold py-4 px-8 rounded-full text-center text-lg shadow-xl">
+                            <i class="fas fa-book-open mr-2"></i> Read Our Story
+                        </a>
+                        <a href="#mission" class="bg-white text-purple-700 font-bold py-4 px-8 rounded-full text-center text-lg border-2 border-purple-200 hover:border-purple-400 transition">
+                            <i class="fas fa-bullseye mr-2"></i> Our Mission
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full primary-gradient flex items-center justify-center floating">
+                            <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                                <div class="text-center p-6">
+                                    <div class="text-6xl mb-4">👨‍👩‍👧‍👦</div>
+                                    <h3 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Family First</h3>
+                                    <p class="text-gray-600">Since 2018</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="absolute -top-4 left-0 bg-white p-4 rounded-2xl shadow-xl" style="animation-delay: 0.5s;">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-users text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">50K+</p>
+                                    <p class="text-sm text-gray-500">Families Protected</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 right-0 bg-white p-4 rounded-2xl shadow-xl" style="animation-delay: 1s;">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-globe-americas text-pink-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">35+</p>
+                                    <p class="text-sm text-gray-500">Countries</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="story" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Our Humble Beginning</h2>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">What started as a personal solution for one family has grown into a mission to protect children worldwide.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <div class="story-card bg-gradient-to-br from-purple-50 to-pink-50 p-8">
+                        <div class="text-5xl mb-6">👩‍💻</div>
+                        <h3 class="text-2xl font-bold mb-4">The Problem We Faced</h3>
+                        <p class="text-gray-700 mb-6">In 2018, Sarah (our founder) gave her 10-year-old daughter a smartphone for the first time. As a cybersecurity expert, she knew the dangers of the digital world. But as a mom, she struggled to find parental controls that were both effective and respectful of her child's growing independence.</p>
+                        <p class="text-gray-700">Every app she tried was either too technical, too invasive, or created an "us vs. them" dynamic. Sarah realized there had to be a better way.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="story-card bg-gradient-to-br from-blue-50 to-cyan-50 p-8">
+                        <div class="text-5xl mb-6">💡</div>
+                        <h3 class="text-2xl font-bold mb-4">The Solution We Built</h3>
+                        <p class="text-gray-700 mb-6">Sarah teamed up with child psychologists, educators, and other parents to create FBI Mom - a parental control app designed from the ground up for modern families.</p>
+                        <p class="text-gray-700">Unlike other solutions, FBI Mom focuses on education and communication, not just surveillance. We believe the goal isn't to control every click, but to teach children how to make smart choices online.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">Our Journey Timeline</h3>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="font-bold text-purple-700">2018</span>
+                                </div>
+                                <h4 class="text-xl font-bold">The Idea Was Born</h4>
+                            </div>
+                            <p class="text-gray-600">Sarah creates the first prototype of FBI Mom to protect her own daughter. Other parents in her community ask for access.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="font-bold text-pink-700">2019</span>
+                                </div>
+                                <h4 class="text-xl font-bold">Official Launch</h4>
+                            </div>
+                            <p class="text-gray-600">FBI Mom launches on iOS and Android with 1,000 early adopters. Featured in "Parenting Tech" magazine.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="font-bold text-blue-700">2020</span>
+                                </div>
+                                <h4 class="text-xl font-bold">Global Expansion</h4>
+                            </div>
+                            <p class="text-gray-600">With remote learning increasing screen time, FBI Mom expands to 15 countries and protects 10,000+ children.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="font-bold text-green-700">2023</span>
+                                </div>
+                                <h4 class="text-xl font-bold">Today & Beyond</h4>
+                            </div>
+                            <p class="text-gray-600">Protecting 50,000+ families across 35 countries. Developing AI-powered insights and expanding our educational resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section id="mission" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Mission & Vision</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-white p-10 rounded-3xl shadow-xl">
+                    <div class="w-20 h-20 primary-gradient rounded-full flex items-center justify-center mb-8">
+                        <i class="fas fa-bullseye text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Our Mission</h3>
+                    <p class="text-gray-700 text-lg mb-6">To empower parents with simple, ethical tools that protect children online while teaching digital responsibility and preserving family trust.</p>
+                    <div class="bg-purple-50 p-6 rounded-2xl">
+                        <p class="text-gray-700 italic">"We don't just block content; we build character. We don't just monitor screens; we mentor digital citizens."</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-10 rounded-3xl shadow-xl">
+                    <div class="w-20 h-20 secondary-gradient rounded-full flex items-center justify-center mb-8">
+                        <i class="fas fa-eye text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Our Vision</h3>
+                    <p class="text-gray-700 text-lg mb-6">A world where every child can explore the digital world safely, where technology strengthens family bonds rather than creating distance, and where parents feel confident rather than overwhelmed.</p>
+                    <div class="bg-pink-50 p-6 rounded-2xl">
+                        <p class="text-gray-700 italic">"We envision a future where digital safety is as natural as teaching a child to look both ways before crossing the street."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">Our Core Values</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="value-card bg-white shadow-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Safety First</h4>
+                        <p class="text-gray-600">We prioritize child protection above all else, using the highest security standards and privacy protections.</p>
+                    </div>
+                    
+                    <div class="value-card bg-white shadow-lg">
+                        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-heart text-pink-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Empathy-Driven</h4>
+                        <p class="text-gray-600">We design for real families with real challenges, remembering that technology should serve people, not the other way around.</p>
+                    </div>
+                    
+                    <div class="value-card bg-white shadow-lg">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-lock text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Privacy by Design</h4>
+                        <p class="text-gray-600">We never sell or share children's data. We believe privacy is a right, not a privilege.</p>
+                    </div>
+                    
+                    <div class="value-card bg-white shadow-lg">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-handshake text-green-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Trust & Transparency</h4>
+                        <p class="text-gray-600">We're open about what we do and why. We believe honest communication builds lasting relationships.</p>
+                    </div>
+                    
+                    <div class="value-card bg-white shadow-lg">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Education Focused</h4>
+                        <p class="text-gray-600">We provide resources to help parents teach digital literacy, not just enforce rules.</p>
+                    </div>
+                    
+                    <div class="value-card bg-white shadow-lg">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Community Built</h4>
+                        <p class="text-gray-600">We listen to our users and evolve based on their feedback. Our community shapes our product.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section id="team" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Meet Our Family</h2>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">We're a diverse team of parents, educators, psychologists, and tech experts united by a common mission: protecting children online.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="team-card bg-gradient-to-b from-white to-purple-50 p-8 text-center shadow-lg">
+                    <div class="w-32 h-32 rounded-full primary-gradient mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                            <div class="text-4xl">👩‍💼</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+                    <p class="text-purple-600 font-medium mb-4">Founder & CEO</p>
+                    <p class="text-gray-600 mb-6">Cybersecurity expert and mom of two. Started FBI Mom to protect her own children and realized other families needed it too.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-600">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-600">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-gradient-to-b from-white to-pink-50 p-8 text-center shadow-lg">
+                    <div class="w-32 h-32 rounded-full secondary-gradient mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                            <div class="text-4xl">👨‍💻</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+                    <p class="text-pink-600 font-medium mb-4">CTO</p>
+                    <p class="text-gray-600 mb-6">Former Google engineer and dad of three. Builds the technology that keeps FBI Mom secure, private, and easy to use.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-600">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-gradient-to-b from-white to-blue-50 p-8 text-center shadow-lg">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                            <div class="text-4xl">👩‍🏫</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dr. Elena Rodriguez</h3>
+                    <p class="text-blue-600 font-medium mb-4">Child Psychologist</p>
+                    <p class="text-gray-600 mb-6">Ensures FBI Mom promotes healthy development and positive parent-child relationships, not fear or conflict.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-600">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-gradient-to-b from-white to-green-50 p-8 text-center shadow-lg">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-r from-green-400 to-emerald-400 mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                            <div class="text-4xl">👨‍👧‍👦</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">David Miller</h3>
+                    <p class="text-green-600 font-medium mb-4">Head of Community</p>
+                    <p class="text-gray-600 mb-6">Dad of four and former teacher. Runs our parent workshops and ensures user feedback shapes our product development.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-green-600">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-600">
+                            <i class="fas fa-comments text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-gray-600 mb-8">We're proud to be a diverse, distributed team with members across 8 countries. What unites us is our commitment to protecting children and supporting families.</p>
+                <a href="/contact-us" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg inline-block">
+                    <i class="fas fa-comments mr-2"></i> Meet More of Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Impact -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Impact in Numbers</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="stat-card bg-white shadow-xl">
+                    <div class="text-5xl mb-4">50,000+</div>
+                    <h3 class="text-xl font-bold mb-2">Families Protected</h3>
+                    <p class="text-gray-600">Parents who trust FBI Mom to keep their children safe online</p>
+                </div>
+                
+                <div class="stat-card bg-white shadow-xl">
+                    <div class="text-5xl mb-4">35+</div>
+                    <h3 class="text-xl font-bold mb-2">Countries</h3>
+                    <p class="text-gray-600">Where FBI Mom helps families navigate digital safety</p>
+                </div>
+                
+                <div class="stat-card bg-white shadow-xl">
+                    <div class="text-5xl mb-4">2.1M+</div>
+                    <h3 class="text-xl font-bold mb-2">Harmful Sites Blocked</h3>
+                    <p class="text-gray-600">Potentially dangerous content prevented from reaching children</p>
+                </div>
+                
+                <div class="stat-card bg-white shadow-xl">
+                    <div class="text-5xl mb-4">98%</div>
+                    <h3 class="text-xl font-bold mb-2">Satisfaction Rate</h3>
+                    <p class="text-gray-600">Parents who recommend FBI Mom to other families</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-10 text-white">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold mb-6">Join Our Mission</h3>
+                    <p class="text-xl mb-8 opacity-90">We're always looking for passionate individuals who want to make a difference in child online safety. Whether you're a parent, educator, or tech expert, there's a place for you in our mission.</p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="/contact-us" class="bg-white text-purple-600 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition">
+                            <i class="fas fa-briefcase mr-2"></i> Careers at FBI Mom
+                        </a>
+                        <a href="/contact-us" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-purple-600 transition">
+                            <i class="fas fa-handshake mr-2"></i> Partner With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Awards & Recognition</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-8">
+                    <div class="text-5xl mb-6">🏆</div>
+                    <h3 class="text-xl font-bold mb-4">Parenting Tech Award 2022</h3>
+                    <p class="text-gray-600">Best Parental Control App for Family-Friendly Design</p>
+                </div>
+                
+                <div class="text-center p-8">
+                    <div class="text-5xl mb-6">🛡️</div>
+                    <h3 class="text-xl font-bold mb-4">Privacy Excellence Seal</h3>
+                    <p class="text-gray-600">Certified by the Family Online Safety Institute</p>
+                </div>
+                
+                <div class="text-center p-8">
+                    <div class="text-5xl mb-6">⭐</div>
+                    <h3 class="text-xl font-bold mb-4">Editor's Choice</h3>
+                    <p class="text-gray-600">Top-rated parental control app by Common Sense Media</p>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-10 rounded-3xl">
+                    <h3 class="text-2xl font-bold mb-6 text-center">In the Media</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-2xl flex items-center justify-center">
+                            <div class="text-gray-700 font-bold text-xl">TechParent</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl flex items-center justify-center">
+                            <div class="text-gray-700 font-bold text-xl">Family Today</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl flex items-center justify-center">
+                            <div class="text-gray-700 font-bold text-xl">Digital Safety</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl flex items-center justify-center">
+                            <div class="text-gray-700 font-bold text-xl">Parenting Weekly</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-4 primary-gradient">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Be Part of Our Story</h2>
+            <p class="text-xl text-white opacity-90 mb-12 max-w-2xl mx-auto">Join thousands of families who trust FBI Mom to protect their children while teaching responsible digital citizenship.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                <a href="/" class="bg-white text-purple-700 font-bold py-5 px-10 rounded-full text-lg shadow-2xl hover:bg-gray-100 transition">
+                    <i class="fas fa-shield-alt mr-2"></i> Start Protecting Your Family
+                </a>
+                <a href="/contact-us" class="bg-transparent border-2 border-white text-white font-bold py-5 px-10 rounded-full text-lg hover:bg-white hover:text-purple-700 transition">
+                    <i class="fas fa-comment-dots mr-2"></i> Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 primary-gradient rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">FBI Mom</span>
+                    </div>
+                    <p class="text-gray-400">Protecting children in the digital world with smart, ethical parental controls designed for modern families.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about-us" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#mission" class="text-gray-400 hover:text-white transition">Our Mission</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Research</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Press Kit</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">GDPR Compliance</a></li>
+                        <li><a href="/contact-us" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 FBI Mom. All rights reserved.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>FBI Mom is committed to child online safety. Our tools are designed to support healthy digital habits and positive parent-child relationships.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        fadeElements.forEach(el => {
+            fadeObserver.observe(el);
+        });
+        
+        // Add fade-in class to specific elements
+        document.querySelectorAll('.story-card, .value-card, .team-card, .stat-card').forEach(card => {
+            card.classList.add('fade-in');
+        });
+        
+        // Timeline animation
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            timelineObserver.observe(item);
+            
+            // Stagger the animation
+            const index = Array.from(timelineItems).indexOf(item);
+            item.style.transitionDelay = `${index * 0.2}s`;
+        });
+        
+        // Stats counter animation
+        const statCards = document.querySelectorAll('.stat-card');
+        
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add a subtle bounce effect
+                    entry.target.style.animation = 'bounce 0.5s ease';
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        
+        statCards.forEach(card => {
+            statObserver.observe(card);
+        });
+        
+        // Add bounce animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+                40% {transform: translateY(-10px);}
+                60% {transform: translateY(-5px);}
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
