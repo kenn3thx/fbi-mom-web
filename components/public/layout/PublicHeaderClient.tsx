@@ -2,6 +2,7 @@
 
 import { AppSettings } from '@/seed';
 import { Menu, Shield, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -20,13 +21,12 @@ export function PublicHeaderClient() {
         <nav className="bg-white shadow-md py-4">
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-2">
-                    <div className="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
-                        <Shield className="text-white" />
+                <Link href="/" className="flex items-center">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                        <Image src="/favicon.svg" alt="Logo" width={32} height={32} />
                     </div>
                     <span
-                        className="text-2xl font-bold"
-                        style={{ color: "var(--color-primary)" }}
+                        className="text-2xl font-bold text-primary"
                     >
                         {settings.siteName}
                     </span>

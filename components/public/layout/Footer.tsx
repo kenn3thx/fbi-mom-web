@@ -1,5 +1,5 @@
 import { AppSettings } from '@/seed';
-import { Shield } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 //import { settingsService } from '@/services/settings.service';
 
@@ -13,9 +13,9 @@ export async function PublicFooter() {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div>
-                        <div className="flex items-center space-x-2 mb-6">
-                            <div className="w-10 h-10 primary-gradient rounded-full flex items-center justify-center">
-                                <Shield className="text-white text-xl" />
+                        <div className="flex items-center mb-6">
+                            <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                                <Image src="/favicon.svg" alt="Logo" width={32} height={32} />
                             </div>
                             <span className="text-2xl font-bold">{settings.siteName}</span>
                         </div>
