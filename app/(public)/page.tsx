@@ -3,7 +3,8 @@ import Link from 'next/link';
 // import { blogService } from '@/services/blog.service';
 // import { settingsService } from '@/services/settings.service';
 import { AppSettings } from '@/seed';
-import {  ArrowRight, Ban, Bed, Bell, Brain, ChartLine, CheckCircle, ChevronDown, Clock, Download, Eye, Heart, Lock, MessageCircle, PlayCircle, Quote, Rocket, Shield, ShieldUser, Star, StarIcon, Timer, TriangleAlert, User } from "lucide-react";
+import { ArrowRight, Ban, Bed, Bell, Brain, ChartLine, CheckCircle, ChevronDown, Clock, Download, Eye, Heart, Lock, MessageCircle, PlayCircle, Quote, Rocket, Shield, ShieldUser, Star, StarIcon, Timer, TriangleAlert, User } from "lucide-react";
+import { VideoDemoSection } from '@/components/public/home/VideoDemoSection';
 
 
 /**
@@ -134,7 +135,7 @@ export default async function HomePage() {
 
 
       {/* Trusted by Parents */}
-      <section className="py-16 px-4 bg-white">
+      {/* <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Trusted by Parents Who Care About Digital Safety</h2>
 
@@ -219,7 +220,10 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <VideoDemoSection />
+    
 
       {/* Problem Awareness */}
       <section id="features" className="py-16 px-4">
