@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { AppSettings } from '@/seed';
 import { ArrowRight, Ban, Bed, Bell, Brain, ChartLine, CheckCircle, ChevronDown, Clock, Download, Eye, Heart, Lock, MessageCircle, PlayCircle, Quote, Rocket, Shield, ShieldUser, Star, StarIcon, Timer, TriangleAlert, User } from "lucide-react";
 import { VideoDemoSection } from '@/components/public/home/VideoDemoSection';
+import HeroSection from '@/components/public/home/HeroSection';
 
 
 /**
@@ -41,97 +42,7 @@ export default async function HomePage() {
     <section className='gradient-bg'>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20 px-4">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="lg:w-1/2 mb-12 lg:mb-0">
-              <div className="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium mb-6">
-                <StarIcon className="mr-2 inline-block" /> <span>Trusted by 50,000+ moms worldwide</span>
-
-              </div>
-
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: 'var(--dark-color)' }}>
-                Smart Parental Control App to Protect Your Child Online
-              </h1>
-
-              <p className="text-xl text-gray-600 mb-8">
-                FBI Mom empowers moms to monitor screen time, block harmful content, and guide children safely through the digital world — all in one simple app.
-              </p>
-
-              <div className="mb-10">
-                <div className="flex items-center mb-3">
-                  <CheckCircle className="text-green-500 mr-3 text-xl" />
-                  <span className="text-lg">Monitor your child's phone activity</span>
-                </div>
-                <div className="flex items-center mb-3">
-                  <CheckCircle className="text-green-500 mr-3 text-xl" />
-                  <span className="text-lg">Block unsafe apps & websites</span>
-                </div>
-                <div className="flex items-center mb-3">
-                  <CheckCircle className="text-green-500 mr-3 text-xl" />
-                  <span className="text-lg">Control screen time effortlessly</span>
-                </div>
-                <div className="flex items-center mb-3">
-                  <CheckCircle className="text-green-500 mr-3 text-xl" />
-                  <span className="text-lg">Get real-time safety alerts</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3 text-xl" />
-                  <span className="text-lg">Designed for moms, not tech experts</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link href="#cta" className="btn-primary text-white font-bold py-4 px-8 rounded-full text-center text-lg shadow-xl">
-                  <ShieldUser className="mr-2 inline-block" /> Start Protecting My Child Now
-                </Link>
-                <Link href="#how-it-works" className="bg-white text-purple-700 font-bold py-4 px-8 rounded-full text-center text-lg border-2 border-purple-200 hover:border-purple-400 transition">
-                  <PlayCircle className="mr-2 inline-block" /> See How It Works
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:w-1/2 flex justify-center">
-              <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full primary-gradient flex items-center justify-center floating">
-                  <div className="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl">
-                    <div className="text-center p-6">
-                      <div className="text-6xl mb-4">👩‍👦</div>
-                      <h3 className="text-2xl font-bold mb-2" style={{ color: 'var(--primary-color)' }}>FBI Mom</h3>
-                      <p className="text-gray-600">Parental Control App</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating elements */}
-                <div className="absolute -top-4 left-0 bg-white p-4 rounded-2xl shadow-xl" style={{ animationDelay: '0.5s' }}>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <Clock className="text-green-600 text-xl" />
-                    </div>
-                    <div>
-                      <p className="font-bold">Screen Time</p>
-                      <p className="text-sm text-gray-500">Managed</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute -bottom-4 right-0 bg-white p-4 rounded-2xl shadow-xl" style={{ animationDelay: '1s' }}>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-3">
-                      <Ban className="text-red-600 text-xl" />
-                    </div>
-                    <div>
-                      <p className="font-bold">Harmful Content</p>
-                      <p className="text-sm text-gray-500">Blocked</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
 
       {/* Trusted by Parents */}
@@ -223,10 +134,10 @@ export default async function HomePage() {
       </section> */}
 
       <VideoDemoSection />
-    
+
 
       {/* Problem Awareness */}
-      <section id="features" className="py-16 px-4">
+      {/* <section id="features" className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Why Children Are at Risk Online Today</h2>
 
@@ -277,10 +188,10 @@ export default async function HomePage() {
             <p className="text-gray-700">We believe in protection through guidance, not punishment. Our app promotes open conversations about online safety.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Solutions */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 ">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">How FBI Mom Protects Your Child</h2>
 
@@ -291,10 +202,10 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Screen Time Monitoring</h3>
               <p className="text-gray-600 mb-6">Track how much time your child spends on apps and devices. Set daily limits and get detailed reports on their digital habits.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              {/* <div className="flex items-center text-purple-600 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
-              </div>
+              </div> */}
             </div>
 
             <div className="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
@@ -303,10 +214,10 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">App & Website Blocking</h3>
               <p className="text-gray-600 mb-6">Block unsafe apps and inappropriate websites instantly. Create custom blocklists or use our pre-configured safety categories.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              {/* <div className="flex items-center text-purple-600 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
-              </div>
+              </div> */}
             </div>
 
             <div className="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
@@ -315,13 +226,13 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Real-Time Alerts</h3>
               <p className="text-gray-600 mb-6">Get notified when risky behavior is detected. Receive alerts for inappropriate content, excessive usage, or attempted blocked site access.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              {/* <div className="flex items-center text-purple-600 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
-              </div>
+              </div> */}
             </div>
 
-            <div className="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
+            {/* <div className="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
               <div className="w-16 h-16 primary-gradient rounded-full flex items-center justify-center mb-6">
                 <Heart className="text-white text-2xl" />
               </div>
@@ -355,13 +266,13 @@ export default async function HomePage() {
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-16 px-4">
+      {/* <section id="how-it-works" className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">How FBI Mom Works in 3 Simple Steps</h2>
 
@@ -397,14 +308,14 @@ export default async function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Target Audience */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Who Is FBImom For?</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="text-center p-6">
               <div className="text-5xl mb-6">👩‍👧</div>
               <h3 className="text-xl font-bold mb-4">Moms with kids aged 6–16</h3>
@@ -423,11 +334,11 @@ export default async function HomePage() {
               <p className="text-gray-600">For parents concerned about online dangers but unsure how to protect their children effectively.</p>
             </div>
 
-            <div className="text-center p-6">
+            {/* <div className="text-center p-6">
               <div className="text-5xl mb-6">❤️</div>
               <h3 className="text-xl font-bold mb-4">Trust-building moms</h3>
               <p className="text-gray-600">For moms who want safety without control battles, fostering trust and open communication.</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -485,33 +396,18 @@ export default async function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section id="cta" className="py-20 px-4 primary-gradient">
+      {/* <section id="cta" className="py-20 px-4 primary-gradient">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Your Child's Safety Can't Wait</h2>
-          <p className="text-xl text-white opacity-90 mb-12 max-w-2xl mx-auto">Join thousands of moms protecting their children online today. Start with a free 14-day trial, no credit card required.</p>
+          <p className="text-xl text-white opacity-90 mb-12 max-w-2xl mx-auto">Join thousands of moms protecting their children online today. Start for free with no credit card required.</p>
 
           <div className="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8 mb-12">
             <Link href="#" className="bg-white text-purple-700 font-bold py-5 px-10 rounded-full text-lg shadow-2xl hover:bg-gray-100 transition">
               <Download className="inline-block mr-2" /> Download FBI Mom
             </Link>
           </div>
-
-          <div className="flex flex-wrap justify-center items-center gap-8 text-white">
-            <div className="flex items-center">
-              <CheckCircle className="text-2xl mr-3" />
-              <span>14-day free trial</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="text-2xl mr-3" />
-              <span>No credit card required</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="text-2xl mr-3" />
-              <span>Cancel anytime</span>
-            </div>
-          </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section id="faq" className="py-16 px-4 bg-white">

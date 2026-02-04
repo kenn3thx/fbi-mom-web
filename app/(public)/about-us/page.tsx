@@ -33,14 +33,14 @@ export default function AboutUsPage() {
                                 FBI Mom was founded by a mother and tech expert who saw the need for simple, ethical parental controls that empower families rather than create conflict.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                            {/* <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
                                 <Link href="#story" className="btn-primary text-white font-bold py-4 px-8 rounded-full text-center text-lg shadow-xl">
                                     <BookOpen className="inline-block mr-2" /> Read Our Story
                                 </Link>
                                 <Link href="#mission" className="bg-white text-purple-700 font-bold py-4 px-8 rounded-full text-center text-lg border-2 border-purple-200 hover:border-purple-400 transition">
                                     <ScanEye className="inline-block mr-2" /> Our Mission & Vision
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="lg:w-1/2 flex justify-center">
@@ -50,7 +50,7 @@ export default function AboutUsPage() {
                                         <div className="text-center p-6">
                                             <div className="text-6xl mb-4">👨‍👩‍👧‍👦</div>
                                             <h3 className="text-2xl font-bold mb-2 text-primary">Family First</h3>
-                                            <p className="text-gray-600">Since 2018</p>
+                                            <p className="text-gray-600">Since 2026</p>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ export default function AboutUsPage() {
                             <div className="story-card bg-linear-to-br from-purple-50 to-pink-50 p-8">
                                 <div className="text-5xl mb-6">👩‍💻</div>
                                 <h3 className="text-2xl font-bold mb-4">The Problem We Faced</h3>
-                                <p className="text-gray-700 mb-6">In 2018, Sarah (our founder) gave her 10-year-old daughter a smartphone for the first time. As a cybersecurity expert, she knew the dangers of the digital world. But as a mom, she struggled to find parental controls that were both effective and respectful of her child's growing independence.</p>
+                                <p className="text-gray-700 mb-6">In 2026, Pierre (our founder) gave her 10-year-old daughter a smartphone for the first time. As a cybersecurity expert, she knew the dangers of the digital world. But as a mom, she struggled to find parental controls that were both effective and respectful of her child's growing independence.</p>
                                 <p className="text-gray-700">Every app she tried was either too technical, too invasive, or created an "us vs. them" dynamic. Sarah realized there had to be a better way.</p>
                             </div>
                         </div>
@@ -111,148 +111,7 @@ export default function AboutUsPage() {
                         </div>
                     </div>
 
-                    <div className="max-w-4xl mx-auto">
-                        <h3 className="text-2xl font-bold text-center mb-8">Our Journey Timeline</h3>
-
-                        <div className="timeline-container">
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <div className="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                                            <span className="font-bold text-purple-700">2018</span>
-                                        </div>
-                                        <h4 className="text-xl font-bold">The Idea Was Born</h4>
-                                    </div>
-                                    <p className="text-gray-600">Sarah creates the first prototype of FBI Mom to protect her own daughter. Other parents in her community ask for access.</p>
-                                </div>
-                            </div>
-
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <div className="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
-                                            <span className="font-bold text-pink-700">2019</span>
-                                        </div>
-                                        <h4 className="text-xl font-bold">Official Launch</h4>
-                                    </div>
-                                    <p className="text-gray-600">FBI Mom launches on iOS and Android with 1,000 early adopters. Featured in "Parenting Tech" magazine.</p>
-                                </div>
-                            </div>
-
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <div className="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                                            <span className="font-bold text-blue-700">2020</span>
-                                        </div>
-                                        <h4 className="text-xl font-bold">Global Expansion</h4>
-                                    </div>
-                                    <p className="text-gray-600">With remote learning increasing screen time, FBI Mom expands to 15 countries and protects 10,000+ children.</p>
-                                </div>
-                            </div>
-
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <div className="timeline-content bg-white p-6 rounded-2xl shadow-lg max-w-md">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                            <span className="font-bold text-green-700">2023</span>
-                                        </div>
-                                        <h4 className="text-xl font-bold">Today & Beyond</h4>
-                                    </div>
-                                    <p className="text-gray-600">Protecting 50,000+ families across 35 countries. Developing AI-powered insights and expanding our educational resources.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Mission & Vision*/}
-            <section id="mission" className="py-16 px-4">
-                <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-12">Our Mission & Vision</h2>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                        <div className="bg-white p-10 rounded-3xl shadow-xl">
-                            <div className="w-20 h-20 primary-gradient rounded-full flex items-center justify-center mb-8">
-                                <ScanEye className="text-white text-3xl" />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-6">Our Mission</h3>
-                            <p className="text-gray-700 text-lg mb-6">To empower parents with simple, ethical tools that protect children online while teaching digital responsibility and preserving family trust.</p>
-                            <div className="bg-purple-50 p-6 rounded-2xl">
-                                <p className="text-gray-700 italic">"We don't just block content; we build character. We don't just monitor screens; we mentor digital citizens."</p>
-                            </div>
-                        </div>
-
-                        <div className="bg-white p-10 rounded-3xl shadow-xl">
-                            <div className="w-20 h-20 secondary-gradient rounded-full flex items-center justify-center mb-8">
-                                <Eye className="text-white text-3xl" />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-6">Our Vision</h3>
-                            <p className="text-gray-700 text-lg mb-6">A world where every child can explore the digital world safely, where technology strengthens family bonds rather than creating distance, and where parents feel confident rather than overwhelmed.</p>
-                            <div className="bg-pink-50 p-6 rounded-2xl">
-                                <p className="text-gray-700 italic">"We envision a future where digital safety is as natural as teaching a child to look both ways before crossing the street."</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto">
-                        <h3 className="text-2xl font-bold text-center mb-8">Our Core Values</h3>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="value-card bg-white shadow-lg">
-                                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                                    <Shield className="text-purple-600 text-2xl" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-4">Safety First</h4>
-                                <p className="text-gray-600">We prioritize child protection above all else, using the highest security standards and privacy protections.</p>
-                            </div>
-
-                            <div className="value-card bg-white shadow-lg">
-                                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
-                                    <Heart className="text-pink-600 text-2xl" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-4">Empathy-Driven</h4>
-                                <p className="text-gray-600">We design for real families with real challenges, remembering that technology should serve people, not the other way around.</p>
-                            </div>
-
-                            <div className="value-card bg-white shadow-lg">
-                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                                    <Lock className="text-blue-600 text-2xl" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-4">Privacy by Design</h4>
-                                <p className="text-gray-600">We never sell or share children's data. We believe privacy is a right, not a privilege.</p>
-                            </div>
-
-                            <div className="value-card bg-white shadow-lg">
-                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                                    <Handshake className="text-green-600 text-2xl" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-4">Trust & Transparency</h4>
-                                <p className="text-gray-600">We're open about what we do and why. We believe honest communication builds lasting relationships.</p>
-                            </div>
-
-                            <div className="value-card bg-white shadow-lg">
-                                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
-                                    <GraduationCap className="text-yellow-600 text-2xl" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-4">Education Focused</h4>
-                                <p className="text-gray-600">We provide resources to help parents teach digital literacy, not just enforce rules.</p>
-                            </div>
-
-                            <div className="value-card bg-white shadow-lg">
-                                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-                                    <Users2 className="text-indigo-600 text-2xl" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-4">Community Built</h4>
-                                <p className="text-gray-600">We listen to our users and evolve based on their feedback. Our community shapes our product.</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -340,65 +199,18 @@ export default function AboutUsPage() {
                         </div>
                     </div>
 
-                    <div className="text-center">
+                    {/* <div className="text-center">
                         <p className="text-gray-600 mb-8">We're proud to be a diverse, distributed team with members across 8 countries. What unites us is our commitment to protecting children and supporting families.</p>
                         <Link href="/contact-us" className="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg inline-block">
                             <MessageCircle className="mr-2 inline-block" /> Meet More of Our Team
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
-            {/* Stats & Impact*/}
-            <section className="py-16 px-4">
-                <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-12">Our Impact in Numbers</h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                        <div className="stat-card bg-white shadow-xl">
-                            <div className="text-5xl mb-4">50,000+</div>
-                            <h3 className="text-xl font-bold mb-2">Families Protected</h3>
-                            <p className="text-gray-600">Parents who trust FBI Mom to keep their children safe online</p>
-                        </div>
-
-                        <div className="stat-card bg-white shadow-xl">
-                            <div className="text-5xl mb-4">35+</div>
-                            <h3 className="text-xl font-bold mb-2">Countries</h3>
-                            <p className="text-gray-600">Where FBI Mom helps families navigate digital safety</p>
-                        </div>
-
-                        <div className="stat-card bg-white shadow-xl">
-                            <div className="text-5xl mb-4">2.1M+</div>
-                            <h3 className="text-xl font-bold mb-2">Harmful Sites Blocked</h3>
-                            <p className="text-gray-600">Potentially dangerous content prevented from reaching children</p>
-                        </div>
-
-                        <div className="stat-card bg-white shadow-xl">
-                            <div className="text-5xl mb-4">98%</div>
-                            <h3 className="text-xl font-bold mb-2">Satisfaction Rate</h3>
-                            <p className="text-gray-600">Parents who recommend FBI Mom to other families</p>
-                        </div>
-                    </div>
-
-                    <div className="bg-linear-to-r from-purple-600 to-pink-600 rounded-3xl p-10 text-white">
-                        <div className="max-w-3xl mx-auto text-center">
-                            <h3 className="text-2xl font-bold mb-6">Join Our Mission</h3>
-                            <p className="text-xl mb-8 opacity-90">We're always looking for passionate individuals who want to make a difference in child online safety. Whether you're a parent, educator, or tech expert, there's a place for you in our mission.</p>
-                            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                                <Link href="/contact-us" className="bg-white text-purple-600 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition">
-                                    <i className="fas fa-briefcase mr-2"></i> Careers at FBI Mom
-                                </Link>
-                                <Link href="/contact-us" className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-purple-600 transition">
-                                    <i className="fas fa-handshake mr-2"></i> Partner With Us
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Awards & Recognition*/}
-            <section className="py-16 px-4 bg-white">
+            {/* <section className="py-16 px-4 bg-white">
                 <div className="container mx-auto">
                     <h2 className="text-3xl font-bold text-center mb-12">Awards & Recognition</h2>
 
@@ -422,30 +234,11 @@ export default function AboutUsPage() {
                         </div>
                     </div>
 
-                    <div className="max-w-4xl mx-auto">
-                        <div className="bg-gray-50 p-10 rounded-3xl">
-                            <h3 className="text-2xl font-bold mb-6 text-center">In the Media</h3>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                <div className="bg-white p-6 rounded-2xl flex items-center justify-center">
-                                    <div className="text-gray-700 font-bold text-xl">TechParent</div>
-                                </div>
-                                <div className="bg-white p-6 rounded-2xl flex items-center justify-center">
-                                    <div className="text-gray-700 font-bold text-xl">Family Today</div>
-                                </div>
-                                <div className="bg-white p-6 rounded-2xl flex items-center justify-center">
-                                    <div className="text-gray-700 font-bold text-xl">Digital Safety</div>
-                                </div>
-                                <div className="bg-white p-6 rounded-2xl flex items-center justify-center">
-                                    <div className="text-gray-700 font-bold text-xl">Parenting Weekly</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Final CTA */}
-            <section className="py-20 px-4 primary-gradient">
+            {/* <section className="py-20 px-4 primary-gradient">
                 <div className="container mx-auto text-center">
                     <h2 className="text-4xl font-bold text-white mb-6">Be Part of Our Story</h2>
                     <p className="text-xl text-white opacity-90 mb-12 max-w-2xl mx-auto">Join thousands of families who trust FBI Mom to protect their children while teaching responsible digital citizenship.</p>
@@ -459,7 +252,7 @@ export default function AboutUsPage() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </section>
     )
 }

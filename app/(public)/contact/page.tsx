@@ -103,7 +103,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Contact Options */}
-      <section id="support" className="py-16 px-4">
+      {/* <section id="support" className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Choose Your Preferred Contact Method</h2>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">We offer multiple ways to get in touch with our support team. Select the option that works best for you.</p>
@@ -191,7 +191,7 @@ export default async function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form */}
       <section className="py-16 px-4 bg-white">
@@ -203,26 +203,10 @@ export default async function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
                 <form id="contact-form" className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="first-name" className="block text-gray-700 font-medium mb-2">First Name *</label>
-                      <input type="text" id="first-name" className="form-input" placeholder="Enter your first name" required />
-                    </div>
-
-                    <div>
-                      <label htmlFor="last-name" className="block text-gray-700 font-medium mb-2">Last Name *</label>
-                      <input type="text" id="last-name" className="form-input" placeholder="Enter your last name" required />
-                    </div>
-                  </div>
 
                   <div>
                     <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address *</label>
                     <input type="email" id="email" className="form-input" placeholder="you@example.com" required />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Phone Number (Optional)</label>
-                    <input type="tel" id="phone" className="form-input" placeholder="(123) 456-7890" />
                   </div>
 
                   <div>
@@ -243,10 +227,11 @@ export default async function AboutPage() {
                     <textarea id="message" rows={6} className="form-input" placeholder="Please describe your question or issue in detail..." required></textarea>
                   </div>
 
-                  <div className="flex items-center">
+                  {/* #TODO: RECAPTCHA */}
+                  {/* <div className="flex items-center">
                     <input type="checkbox" id="consent" className="w-5 h-5 mr-3" required />
-                    <label htmlFor="consent" className="text-gray-700">I agree to the <a href="#" className="text-purple-600 hover:underline">Privacy Policy</a> and consent to FBI Mom contacting me regarding my inquiry.</label>
-                  </div>
+                    <label htmlFor="consent" className="text-gray-700">I agree to the <Link href="/privacy-policy" className="text-purple-600 hover:underline">Privacy Policy</Link> and consent to FBI Mom contacting me regarding my inquiry.</label>
+                  </div> */}
 
                   <button type="submit" className="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg w-full md:w-auto">
                     <SendIcon className="inline mr-2 w-5 h-5" /> Send Message
@@ -300,10 +285,6 @@ export default async function AboutPage() {
                       <p className="font-bold text-blue-800">Email</p>
                       <p className="text-blue-700">Within 2 hours (business hours)</p>
                     </div>
-                    <div>
-                      <p className="font-bold text-blue-800">Phone</p>
-                      <p className="text-blue-700">Immediate during business hours</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -313,7 +294,7 @@ export default async function AboutPage() {
       </section>
 
       {/* FAQ & Resources */}
-      <section className="py-16 px-4">
+      {/* <section className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Quick Help & Resources</h2>
 
@@ -406,7 +387,7 @@ export default async function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
     </section>

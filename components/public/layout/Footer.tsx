@@ -26,7 +26,6 @@ export async function PublicFooter() {
                         <h4 className="text-xl font-bold mb-6">Product</h4>
                         <ul className="space-y-3">
                             <li><Link href="/#features" className="text-gray-400 hover:text-white transition">Features</Link></li>
-                            <li><Link href="/pricing" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
                             <li><Link href="/download" className="text-gray-400 hover:text-white transition">Download</Link></li>
                             <li><Link href="/#how-it-works" className="text-gray-400 hover:text-white transition">How It Works</Link></li>
                         </ul>
@@ -38,7 +37,6 @@ export async function PublicFooter() {
                             <li><Link href="/blog" className="text-gray-400 hover:text-white transition">Blog</Link></li>
                             <li><Link href="/child-safety-tips" className="text-gray-400 hover:text-white transition">Child Safety Tips</Link></li>
                             <li><Link href="/screen-time-guides" className="text-gray-400 hover:text-white transition">Screen Time Guides</Link></li>
-                            <li><Link href="/parenting-webinars" className="text-gray-400 hover:text-white transition">Parenting Webinars</Link></li>
                         </ul>
                     </div>
 

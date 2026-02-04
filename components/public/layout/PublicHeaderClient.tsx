@@ -36,13 +36,14 @@ export function PublicHeaderClient() {
                 <div className="hidden md:flex space-x-8">
                     <Link href="/#features" className="font-medium hover:text-purple-600">Features</Link>
                     <Link href="/#how-it-works" className="font-medium hover:text-purple-600">How It Works</Link>
+                    <Link href="/download" className="font-medium hover:text-purple-600">Download</Link>
                     <Link href="/about-us" className="font-medium hover:text-purple-600">About Us</Link>
-                    <Link href="/#faq" className="font-medium hover:text-purple-600">FAQ</Link>
+                    {/* <Link href="/#faq" className="font-medium hover:text-purple-600">FAQ</Link> */}
                 </div>
 
                 {/* CTA */}
                 <div className="hidden md:block">
-                    <Link href="#cta" className="btn-primary text-white font-semibold py-3 px-6 rounded-full shadow-lg">
+                    <Link href="/get-started" className="btn-primary text-white font-semibold py-3 px-6 rounded-full shadow-lg">
                         Get Started
                     </Link>
                 </div>
@@ -63,9 +64,9 @@ export function PublicHeaderClient() {
                     <div className="flex flex-col space-y-4">
                         <Link onClick={() => setOpen(false)} href="/#features" className='py-2 px-4'>Features</Link>
                         <Link onClick={() => setOpen(false)} href="/#how-it-works" className='py-2 px-4'>How It Works</Link>
+                        <Link onClick={() => setOpen(false)} href="/download" className='py-2 px-4'>Download</Link>
                         <Link onClick={() => setOpen(false)} href="/about-us" className='py-2 px-4' >About Us</Link>
-                        <Link onClick={() => setOpen(false)} href="/#faq" className='py-2 px-4'>FAQ</Link>
-                        <Link href="#cta" className="font-semibold py-2 px-4 text-primary">
+                        <Link onClick={() => setOpen(false)} href="/get-started" className="font-semibold py-2 px-4 text-primary">
                             Get Started
                         </Link>
                     </div>

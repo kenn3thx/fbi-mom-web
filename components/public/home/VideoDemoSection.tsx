@@ -40,16 +40,16 @@ export function VideoDemoSection() {
     };
 
     return (
-        <div className="relative w-full bg-white py-24">
+        <div id="#how-it-works" className="relative w-full bg-white py-24">
             <div className="mx-auto max-w-7xl px-4">
 
                 {/* Heading */}
                 <div className="mb-16 text-center">
                     <h2 className="text-4xl font-bold text-gray-900">
-                        See How It Works
+                        Stop Arguing, Start Motivating
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                        A quick walkthrough of the core experience
+                        Watch how our unique Star System teaches your child to earn their screen time through positive actions.
                     </p>
                 </div>
 
@@ -57,18 +57,18 @@ export function VideoDemoSection() {
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {[
                         {
-                            title: "Step 1 · Identify the Problem",
-                            desc: "Understand the challenge in seconds",
+                            title: "Transform Chores into Achievements",
+                            desc: " Establish a positive daily routine by turning household responsibilities into rewarding goals. With FBIMOM, you can easily create custom daily tasks—like tidying the room or doing homework. Once your child completes a task, you validate it with a single tap, awarding them Star Credits. It’s the perfect way to build lasting habits while making responsibility fun!",
                             src: "/uploads/video/video_1.mp4",
                         },
                         {
-                            title: "Step 2 · Our Solution",
-                            desc: "See how the system works",
+                            title: "How the Star Economy Works",
+                            desc: "FBIMOM creates a bridge between effort and reward. Parents create tasks, and children mark them as 'Done' once finished. After your validation, stars are instantly added to the child's balance. Your child can then visit the Rewards Store to trade their stars for extra screen time or special prizes you’ve created—like a movie night or a favorite treat!",
                             src: "/uploads/video/video_2.mp4",
                         },
                         {
-                            title: "Step 3 · Get Results",
-                            desc: "Experience the final outcome",
+                            title: " Effort Rewarded: More Screen Time, Happier Kids",
+                            desc: "See the magic in action! This video beautifully illustrates how your child directly benefits from their efforts. As they help with daily tasks, they instantly earn valuable Star Credits. These stars unlock their favorite digital activities, allowing them to enjoy their screen time knowing they've earned it through responsibility and teamwork. It’s the ultimate win-win for parents and children!",
                             src: "/uploads/video/video_3.mp4",
                         },
                     ].map((video, index) => (
@@ -109,13 +109,6 @@ export function VideoDemoSection() {
                                 "
                                     onClick={() => playVideoAt(index)}
                                 >
-                                    {/* <svg
-                                    className="h-8 w-8 text-white"
-                                    fill="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M8 5v14l11-7z" />
-                                </svg> */}
                                     {currentIndex === index ? (
                                         // PAUSE ICON
                                         <svg
