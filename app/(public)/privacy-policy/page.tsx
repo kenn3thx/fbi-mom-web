@@ -1,11 +1,11 @@
-import { AppSettings } from "@/seed";
+//import { AppSettings } from "@/seed";
 import { Home } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
     //const settings = await settingsService.getSettings();
-    const settings = AppSettings;
+    //const settings = AppSettings;
 
     return {
         title: 'Privacy Policy – FBI Mom Parental Control App',
@@ -242,7 +242,16 @@ export default function PrivacyPolicyPage() {
 
                     {/* Section 10 */}
                     <div className="privacy-section">
-                        <h2 className="text-3xl font-bold mb-6">10. Contact Us</h2>
+                        <h2 className="text-3xl font-bold mb-6">10. Data Ownership and Disclosure</h2>
+
+                        <div className="bg-white p-6 rounded-2xl shadow-sm">
+                            <p className="text-gray-700 mb-4">FBIMOM is a private commercial service. Your data is managed exclusively by our platform for parental supervision and is not shared with government law enforcement agencies (such as the FBI) unless required by a specific court order or legal process, as detailed in the 'Legal Requirements' section below.</p>
+                        </div>
+                    </div>
+
+                    {/* Section 10 */}
+                    <div className="privacy-section">
+                        <h2 className="text-3xl font-bold mb-6">11. Contact Us</h2>
                         <div className="bg-white p-6 rounded-2xl shadow-sm">
                             <ul className="list-disc pl-6 text-gray-700 space-y-2">
                                 <li>Support: support@fbimom.com</li>

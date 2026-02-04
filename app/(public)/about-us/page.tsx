@@ -1,6 +1,7 @@
 import { AppSettings } from "@/seed";
-import { BookOpen, Eye, Github, Globe, GraduationCap, Handshake, Heart, Linkedin, Lock, MessageCircle, ScanEye, Shield, Twitter, Users, Users2, X } from "lucide-react";
+import { Github, Globe, GraduationCap, Heart, Linkedin, Twitter, Users } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -43,42 +44,17 @@ export default function AboutUsPage() {
                             </div> */}
                         </div>
 
-                        <div className="lg:w-1/2 flex justify-center">
-                            <div className="relative">
-                                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full primary-gradient flex items-center justify-center floating">
-                                    <div className="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl">
-                                        <div className="text-center p-6">
-                                            <div className="text-6xl mb-4">👨‍👩‍👧‍👦</div>
-                                            <h3 className="text-2xl font-bold mb-2 text-primary">Family First</h3>
-                                            <p className="text-gray-600">Since 2026</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Floating elements*/}
-                                <div className="absolute -top-4 left-0 bg-white p-4 rounded-2xl shadow-xl" style={{ animationDelay: "0.5s" }}>
-                                    <div className="flex items-center">
-                                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                            <Users className="text-green-600 text-xl" />
-                                        </div>
-                                        <div>
-                                            <p className="font-bold">50K+</p>
-                                            <p className="text-sm text-gray-500">Families Protected</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="absolute -bottom-4 right-0 bg-white p-4 rounded-2xl shadow-xl" style={{ animationDelay: "1s" }}>
-                                    <div className="flex items-center">
-                                        <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-3">
-                                            <Globe className="text-pink-600 text-xl" />
-                                        </div>
-                                        <div>
-                                            <p className="font-bold">35+</p>
-                                            <p className="text-sm text-gray-500">Countries</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        {/* Right image */}
+                        <div className="lg:w-1/2 md:px-12">
+                            <div className=" overflow-hidden">
+                                <Image
+                                    src="/uploads/images/hero-section-about-us.jpg" // your existing image
+                                    alt="Mother protecting child online"
+                                    width={600}
+                                    height={600}
+                                    className="object-cover rounded-3xl shadow-xl"
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
@@ -88,16 +64,16 @@ export default function AboutUsPage() {
             {/* Our Story*/}
             <section id="story" className="py-16 px-4 bg-white">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-4">Our Humble Beginning</h2>
-                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">What started as a personal solution for one family has grown into a mission to protect children worldwide.</p>
+                    <h2 className="text-3xl font-bold text-center mb-4">The Story Behind FBIMOM</h2>
+                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">Peace of mind for the modern parent.</p>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                         <div>
                             <div className="story-card bg-linear-to-br from-purple-50 to-pink-50 p-8">
                                 <div className="text-5xl mb-6">👩‍💻</div>
                                 <h3 className="text-2xl font-bold mb-4">The Problem We Faced</h3>
-                                <p className="text-gray-700 mb-6">In 2026, Pierre (our founder) gave her 10-year-old daughter a smartphone for the first time. As a cybersecurity expert, she knew the dangers of the digital world. But as a mom, she struggled to find parental controls that were both effective and respectful of her child's growing independence.</p>
-                                <p className="text-gray-700">Every app she tried was either too technical, too invasive, or created an "us vs. them" dynamic. Sarah realized there had to be a better way.</p>
+                                <p className="text-gray-700 mb-6">FBIMOM was born from a simple question: How can we let our children explore the internet without constant fear? We created this tool to be an extension of a parent’s intuition. We believe that digital safety shouldn't feel like a police state—it should feel like a safety net.</p>
+                                <p className="text-gray-700">FBIMOM watches over your child’s interactions with the same care you do, alerting you only when it truly matters. It is artificial intelligence dedicated to family love.</p>
                             </div>
                         </div>
 
@@ -105,32 +81,32 @@ export default function AboutUsPage() {
                             <div className="story-card bg-linear-to-br from-blue-50 to-cyan-50 p-8">
                                 <div className="text-5xl mb-6">💡</div>
                                 <h3 className="text-2xl font-bold mb-4">The Solution We Built</h3>
-                                <p className="text-gray-700 mb-6">Sarah teamed up with child psychologists, educators, and other parents to create FBI Mom - a parental control app designed from the ground up for modern families.</p>
+                                <p className="text-gray-700 mb-6">We didn't just build a monitoring tool; we created a collaborative ecosystem where parents and children work together toward a healthy digital life. FBIMOM is designed as a "Quest & Reward" platform where safety meets fun.</p>
                                 <p className="text-gray-700">Unlike other solutions, FBI Mom focuses on education and communication, not just surveillance. We believe the goal isn't to control every click, but to teach children how to make smart choices online.</p>
                             </div>
                         </div>
                     </div>
 
-                    
+
                 </div>
             </section>
 
             {/* Meet the Team*/}
             <section id="team" className="py-16 px-4 bg-white">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-4">Meet Our Family</h2>
-                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">We're a diverse team of parents, educators, psychologists, and tech experts united by a common mission: protecting children online.</p>
+                    <h2 className="text-3xl font-bold text-center mb-4">Meet Our Small Team, Big Vision</h2>
+                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">FBIMOM was born from the collaboration of three passionate creators who believe that parental control shouldn't just be about restrictions. We worked together to build a tool that empowers moms and rewards kids, making daily life easier for everyone, one star at a time.</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                         <div className="team-card bg-linear-to-b from-white to-purple-50 p-8 text-center shadow-lg">
                             <div className="w-32 h-32 rounded-full primary-gradient mx-auto mb-6 flex items-center justify-center">
                                 <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center">
                                     <div className="text-4xl">👩‍💼</div>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Sarah Johnson</h3>
-                            <p className="text-purple-600 font-medium mb-4">Founder & CEO</p>
-                            <p className="text-gray-600 mb-6">Cybersecurity expert and mom of two. Started FBI Mom to protect her own children and realized other families needed it too.</p>
+                            <h3 className="text-xl font-bold mb-2">Steve Bang</h3>
+                            <p className="text-purple-600 font-medium mb-4">CTO</p>
+                            <p className="text-gray-600 mb-6">Architect of the FBIMOM ecosystem. I focus on building secure, seamless technology that parents can trust, ensuring that every 'Star' earned and every minute monitored is handled with the highest level of data integrity.</p>
                             <div className="flex justify-center space-x-4">
                                 <Link href="#" className="text-gray-400 hover:text-purple-600">
                                     <Linkedin className="text-xl" />
@@ -147,9 +123,9 @@ export default function AboutUsPage() {
                                     <div className="text-4xl">👨‍💻</div>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Michael Chen</h3>
-                            <p className="text-pink-600 font-medium mb-4">CTO</p>
-                            <p className="text-gray-600 mb-6">Former Google engineer and dad of three. Builds the technology that keeps FBI Mom secure, private, and easy to use.</p>
+                            <h3 className="text-xl font-bold mb-2">Kennenth</h3>
+                            <p className="text-pink-600 font-medium mb-4">Software Engineer</p>
+                            <p className="text-gray-600 mb-6">Specializing in robust mobile development, I ensure FBIMOM stays fast and fluid, no matter how many tasks are created. My daily challenge is turning complex control algorithms into a simple, intuitive user experience.</p>
                             <div className="flex justify-center space-x-4">
                                 <Link href="#" className="text-gray-400 hover:text-pink-600">
                                     <Linkedin className="text-xl" />
@@ -166,9 +142,9 @@ export default function AboutUsPage() {
                                     <div className="text-4xl">👩‍🏫</div>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Dr. Elena Rodriguez</h3>
-                            <p className="text-blue-600 font-medium mb-4">Child Psychologist</p>
-                            <p className="text-gray-600 mb-6">Ensures FBI Mom promotes healthy development and positive parent-child relationships, not fear or conflict.</p>
+                            <h3 className="text-xl font-bold mb-2">ToTo</h3>
+                            <p className="text-blue-600 font-medium mb-4">Marketing Lead</p>
+                            <p className="text-gray-600 mb-6">My mission is to share the FBIMOM vision with families worldwide. I focus on understanding the daily challenges moms face and ensuring our message resonates with empathy. I’m here to build a community where parenting in the digital age feels less like a struggle and more like a shared success.</p>
                             <div className="flex justify-center space-x-4">
                                 <Link href="#" className="text-gray-400 hover:text-blue-600">
                                     <Linkedin className="text-xl" />
@@ -179,24 +155,6 @@ export default function AboutUsPage() {
                             </div>
                         </div>
 
-                        <div className="team-card bg-linear-to-b from-white to-green-50 p-8 text-center shadow-lg">
-                            <div className="w-32 h-32 rounded-full bg-linear-to-r from-green-400 to-emerald-400 mx-auto mb-6 flex items-center justify-center">
-                                <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center">
-                                    <div className="text-4xl">👨‍👧‍👦</div>
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">David Miller</h3>
-                            <p className="text-green-600 font-medium mb-4">Head of Community</p>
-                            <p className="text-gray-600 mb-6">Dad of four and former teacher. Runs our parent workshops and ensures user feedback shapes our product development.</p>
-                            <div className="flex justify-center space-x-4">
-                                <Link href="#" className="text-gray-400 hover:text-green-600">
-                                    <Linkedin className="text-xl" />
-                                </Link>
-                                <Link href="#" className="text-gray-400 hover:text-green-600">
-                                    <Twitter className="text-xl" />
-                                </Link>
-                            </div>
-                        </div>
                     </div>
 
                     {/* <div className="text-center">

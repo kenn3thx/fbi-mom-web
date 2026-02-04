@@ -228,9 +228,18 @@ export default function TermsOfServicePage() {
                         </div>
                     </div>
 
+                    {/* Section 11 */}
+                    <div className="terms-section">
+                        <h2 className="text-3xl font-bold mb-6">12. Branding and Affiliation</h2>
+
+                        <div className="bg-white p-6 rounded-2xl shadow-sm">
+                            <p className="text-gray-700 mb-4">The User acknowledges and agrees that FBIMOM is a private, independent software application developed for parental control purposes. FBIMOM is not affiliated with, endorsed by, or connected to the Federal Bureau of Investigation (FBI), the U.S. Department of Justice, or any other governmental or law enforcement agency worldwide. The name is a creative trade name and does not imply any official authority or police powers.</p>
+                        </div>
+                    </div>
+
                     {/* Section 12 */}
                     <div className="terms-section">
-                        <h2 className="text-3xl font-bold mb-6">12. Governing Law</h2>
+                        <h2 className="text-3xl font-bold mb-6">13. Governing Law</h2>
 
                         <div className="legal-note">
                             <p className="text-gray-700">These Terms are governed by and interpreted in accordance with applicable laws, without regard to conflict of law principles.</p>
@@ -240,7 +249,7 @@ export default function TermsOfServicePage() {
                     {/* Section 13 */}
                     <div className="terms-section">
                         <div className="bg-white p-6 rounded-2xl shadow-sm">
-                            <h2 className="text-3xl font-bold mb-6">13. Contact Us</h2>
+                            <h2 className="text-3xl font-bold mb-6">14. Contact Us</h2>
                             <span>Questions About These Terms? If you have questions about these Terms, please contact us:</span>
                             <ul className="list-disc pl-6 text-gray-700 space-y-2">
                                 <li>Support: support@fbimom.com</li>

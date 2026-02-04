@@ -67,8 +67,8 @@ export async function PublicFooter() {
                     </div>
                 </div>
 
-                <div className="mt-8 text-center text-gray-500 text-sm">
-                    <p>FBI Mom is a parental control app designed to help parents monitor and guide their children's online activities. It should be used as part of a comprehensive approach to digital safety that includes open communication and education.</p>
+                <div className="mt-8 text-center text-gray-400 text-sm">
+                    <p>Legal Disclaimer: FBIMOM is an independent parental control tool. We are not affiliated with, associated with, authorized by, or in any way officially connected to the Federal Bureau of Investigation (FBI) or any government agency. The name "FBI" in FBIMOM is used for creative branding purposes only.</p>
                 </div>
             </div>
         </footer>
