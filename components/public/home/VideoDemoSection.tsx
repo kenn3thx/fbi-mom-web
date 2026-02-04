@@ -8,6 +8,27 @@ export function VideoDemoSection() {
 
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
+    const videos = [
+        {
+            title: "Transform Chores into Achievements",
+            desc: " Establish a positive daily routine by turning household responsibilities into rewarding goals. With FBIMOM, you can easily create custom daily tasks—like tidying the room or doing homework. Once your child completes a task, you validate it with a single tap, awarding them Star Credits. It’s the perfect way to build lasting habits while making responsibility fun!",
+            src: "/uploads/video/video_1.mp4",
+            poster: "/uploads/images/poster_video_demo_1.webp",
+        },
+        {
+            title: "How the Star Economy Works",
+            desc: "FBIMOM creates a bridge between effort and reward. Parents create tasks, and children mark them as 'Done' once finished. After your validation, stars are instantly added to the child's balance. Your child can then visit the Rewards Store to trade their stars for extra screen time or special prizes you’ve created—like a movie night or a favorite treat!",
+            src: "/uploads/video/video_2.mp4",
+            poster: "/uploads/images/poster_video_demo_2.webp",
+        },
+        {
+            title: " Effort Rewarded: More Screen Time, Happier Kids",
+            desc: "See the magic in action! This video beautifully illustrates how your child directly benefits from their efforts. As they help with daily tasks, they instantly earn valuable Star Credits. These stars unlock their favorite digital activities, allowing them to enjoy their screen time knowing they've earned it through responsibility and teamwork. It’s the ultimate win-win for parents and children!",
+            src: "/uploads/video/video_3.mp4",
+            poster: "/uploads/images/poster_video_demo_3.webp",
+        },
+    ];
+
     const playVideoAt = (index: number) => {
         const currentVideo = videoRefs.current[index];
         if (!currentVideo) return;
@@ -55,23 +76,7 @@ export function VideoDemoSection() {
 
                 {/* Video Grid */}
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {[
-                        {
-                            title: "Transform Chores into Achievements",
-                            desc: " Establish a positive daily routine by turning household responsibilities into rewarding goals. With FBIMOM, you can easily create custom daily tasks—like tidying the room or doing homework. Once your child completes a task, you validate it with a single tap, awarding them Star Credits. It’s the perfect way to build lasting habits while making responsibility fun!",
-                            src: "/uploads/video/video_1.mp4",
-                        },
-                        {
-                            title: "How the Star Economy Works",
-                            desc: "FBIMOM creates a bridge between effort and reward. Parents create tasks, and children mark them as 'Done' once finished. After your validation, stars are instantly added to the child's balance. Your child can then visit the Rewards Store to trade their stars for extra screen time or special prizes you’ve created—like a movie night or a favorite treat!",
-                            src: "/uploads/video/video_2.mp4",
-                        },
-                        {
-                            title: " Effort Rewarded: More Screen Time, Happier Kids",
-                            desc: "See the magic in action! This video beautifully illustrates how your child directly benefits from their efforts. As they help with daily tasks, they instantly earn valuable Star Credits. These stars unlock their favorite digital activities, allowing them to enjoy their screen time knowing they've earned it through responsibility and teamwork. It’s the ultimate win-win for parents and children!",
-                            src: "/uploads/video/video_3.mp4",
-                        },
-                    ].map((video, index) => (
+                    {videos.map((video, index) => (
 
                         <div key={index} className="mx-auto w-full max-w-[320px]">
                             <div
@@ -92,14 +97,18 @@ export function VideoDemoSection() {
                                     preload="metadata"
                                     playsInline
                                     onEnded={() => handleEnded(index)}
+                                    poster={video.poster}
+                                    
                                 />
 
                                 {/* Overlay */}
                                 <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
 
                                 {/* Play Button */}
-                                <button
-                                    className="
+                                {
+                                    currentIndex !== index && (
+                                        <button
+                                            className="
                                   absolute left-1/2 top-1/2 z-10
                                   flex h-16 w-16 -translate-x-1/2 -translate-y-1/2
                                   items-center justify-center rounded-full
@@ -107,28 +116,18 @@ export function VideoDemoSection() {
                                   transition-all duration-300
                                   hover:scale-110 hover:bg-white/30
                                 "
-                                    onClick={() => playVideoAt(index)}
-                                >
-                                    {currentIndex === index ? (
-                                        // PAUSE ICON
-                                        <svg
-                                            className="h-8 w-8 text-white"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
+                                            onClick={() => playVideoAt(index)}
                                         >
-                                            <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
-                                        </svg>
-                                    ) : (
-                                        // PLAY ICON
-                                        <svg
-                                            className="h-8 w-8 text-white"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                        >
-                                            <path d="M8 5v14l11-7z" />
-                                        </svg>
-                                    )}
-                                </button>
+                                            {/* PLAY ICON */}
+                                            <svg
+                                                className="h-8 w-8 text-white"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                            >
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        </button>)
+                                }
 
                             </div>
 

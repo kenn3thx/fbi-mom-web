@@ -2,11 +2,16 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { StarIcon, ShieldUser, CheckCircle, Play, Pause } from "lucide-react";
+import { ShieldUser, CheckCircle, Play } from "lucide-react";
 
 export default function HeroSection() {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+
+    const video = {
+        src: "/uploads/video/video_intro_hero.mp4",
+        poster: "/uploads/images/poster_video_intro_hero.webp",
+    };
 
     const togglePlay = () => {
         if (!videoRef.current) return;
@@ -14,7 +19,7 @@ export default function HeroSection() {
         if (isPlaying) {
             videoRef.current.pause();
         } else {
-            videoRef.current.muted = false; 
+            videoRef.current.muted = false;
             videoRef.current.play();
         }
         setIsPlaying(!isPlaying);
@@ -46,7 +51,7 @@ export default function HeroSection() {
                         </p> */}
                         <p className="text-lg md:text-xl text-gray-600 max-w-xl mb-8">
                             The 100% Free Parental Control App that Teaches Responsibility
-Unlike other apps that only restrict. We help you guide your child toward a balanced digital life while getting things done at home!
+                            Unlike other apps that only restrict. We help you guide your child toward a balanced digital life while getting things done at home!
                         </p>
 
                         <ul className="space-y-4 mb-10">
@@ -65,7 +70,7 @@ Unlike other apps that only restrict. We help you guide your child toward a bala
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link
-                                href="#cta"
+                                href="/get-started"
                                 className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
                             >
                                 <ShieldUser className="mr-2 h-5 w-5" />
@@ -86,16 +91,14 @@ Unlike other apps that only restrict. We help you guide your child toward a bala
                                 <video
                                     ref={videoRef}
                                     className="absolute inset-0 h-full w-full object-cover"
-                                    src="/uploads/video/video_intro_hero.mp4"
-                                    
+                                    src={video.src}
                                     playsInline
                                     preload="metadata"
-                                    //poster="/uploads/video/video_intro_hero.mp4"
-                                    // 
+                                    poster={video.poster}
                                 />
 
                                 {/* Gradient overlay */}
-                                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/40 via-black/10 to-transparent" />
 
                                 {/* Play / Pause Button */}
                                 <button
@@ -105,8 +108,10 @@ Unlike other apps that only restrict. We help you guide your child toward a bala
                                       transition group-hover:bg-black/10
                                     "
                                 >
-                                    <div
-                                        className="
+                                    {
+                                        !isPlaying && (
+                                            <div
+                                                className="
                                           flex h-20 w-20 items-center justify-center
                                           rounded-full bg-white/90
                                           backdrop-blur
@@ -114,13 +119,12 @@ Unlike other apps that only restrict. We help you guide your child toward a bala
                                           transition
                                           group-hover:scale-110
                                         "
-                                    >
-                                        {isPlaying ? (
-                                            <Pause className="h-8 w-8 text-purple-600" />
-                                        ) : (
-                                            <Play className="ml-1 h-8 w-8 text-purple-600" />
-                                        )}
-                                    </div>
+                                            >
+                                                <Play className="ml-1 h-8 w-8 text-purple-600" />
+                                            </div>
+                                        )
+                                    }
+
                                 </button>
                             </div>
                         </div>
