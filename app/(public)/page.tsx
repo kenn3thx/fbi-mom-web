@@ -387,9 +387,9 @@ export default async function HomePage() {
               <div className="text-7xl mb-6">🛡️</div>
               <h3 className="text-2xl font-bold mb-6">"Protection without punishment."</h3>
               <p className="text-gray-700 text-lg mb-8">Our philosophy centers on guiding children to make smart choices online, rather than punishing them for mistakes. We believe in teaching digital responsibility.</p>
-              <div className="inline-block px-6 py-3 bg-white rounded-full font-bold text-purple-700 shadow-md">
+              {/* <div className="inline-block px-6 py-3 bg-white rounded-full font-bold text-purple-700 shadow-md">
                 <Quote className="inline-block text-purple-600 mr-2" /> Ethical Monitoring
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

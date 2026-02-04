@@ -136,7 +136,7 @@ export function VideoDemoSection() {
                                 <h3 className="text-base font-semibold text-gray-900">
                                     {video.title}
                                 </h3>
-                                <p className="mt-1 text-sm text-gray-500">
+                                <p className="mt-1 text-gray-500">
                                     {video.desc}
                                 </p>
                             </div>
