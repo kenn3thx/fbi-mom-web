@@ -15,6 +15,46 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function AboutUsPage() {
+
+    const team = [
+        {
+            name: "Steve Bang",
+            role: "CTO",
+            roleColor: "text-purple-600",
+            image: "/uploads/images/steve-bang.png",
+            bio:
+                "Architect of the FBIMOM ecosystem. I focus on building secure, seamless technology that parents can trust, ensuring that every 'Star' earned and every minute monitored is handled with the highest level of data integrity.",
+            // socials: [
+            //     { icon: Linkedin, href: "#" },
+            //     { icon: Twitter, href: "#" },
+            // ],
+        },
+        {
+            name: "Kennenth",
+            role: "Software Engineer",
+            roleColor: "text-pink-600",
+            image: "/uploads/images/kennenth.png",
+            bio:
+                "Specializing in robust mobile development, I ensure FBIMOM stays fast and fluid, no matter how many tasks are created. My daily challenge is turning complex control algorithms into a simple, intuitive user experience.",
+            // socials: [
+            //     { icon: Linkedin, href: "#" },
+            //     { icon: Github, href: "#" },
+            // ],
+        },
+        {
+            name: "ToTo",
+            role: "Marketing Lead",
+            roleColor: "text-blue-600",
+            image: "/uploads/images/toto.jpeg",
+            bio:
+                "My mission is to share the FBIMOM vision with families worldwide. I focus on understanding the daily challenges moms face and ensuring our message resonates with empathy. I’m here to build a community where parenting in the digital age feels less like a struggle and more like a shared success.",
+            // socials: [
+            //     { icon: Linkedin, href: "#" },
+            //     { icon: GraduationCap, href: "#" },
+            // ],
+        },
+    ];
+
     return (
         <section>
             {/* Hero Section*/}
@@ -97,72 +137,11 @@ export default function AboutUsPage() {
                     <h2 className="text-3xl font-bold text-center mb-4 text-[#655B50]">Meet Our Small Team, Big Vision</h2>
                     <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">FBIMOM was born from the collaboration of three passionate creators who believe that parental control shouldn't just be about restrictions. We worked together to build a tool that empowers moms and rewards kids, making daily life easier for everyone, one star at a time.</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                        <div className="team-card bg-linear-to-b from-white to-purple-50 p-8 text-center shadow-lg">
-                            <div className="w-32 h-32 rounded-full primary-gradient mx-auto mb-6 flex items-center justify-center">
-                                <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center">
-                                    <div className="text-4xl">👩‍💼</div>
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">Steve Bang</h3>
-                            <p className="text-purple-600 font-medium mb-4">CTO</p>
-                            <p className="text-gray-600 mb-6">Architect of the FBIMOM ecosystem. I focus on building secure, seamless technology that parents can trust, ensuring that every 'Star' earned and every minute monitored is handled with the highest level of data integrity.</p>
-                            <div className="flex justify-center space-x-4">
-                                <Link href="#" className="text-gray-400 hover:text-purple-600">
-                                    <Linkedin className="text-xl" />
-                                </Link>
-                                <Link href="#" className="text-gray-400 hover:text-purple-600">
-                                    <Twitter className="text-xl" />
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="team-card bg-linear-to-b from-white to-pink-50 p-8 text-center shadow-lg">
-                            <div className="w-32 h-32 rounded-full secondary-gradient mx-auto mb-6 flex items-center justify-center">
-                                <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center">
-                                    <div className="text-4xl">👨‍💻</div>
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">Kennenth</h3>
-                            <p className="text-pink-600 font-medium mb-4">Software Engineer</p>
-                            <p className="text-gray-600 mb-6">Specializing in robust mobile development, I ensure FBIMOM stays fast and fluid, no matter how many tasks are created. My daily challenge is turning complex control algorithms into a simple, intuitive user experience.</p>
-                            <div className="flex justify-center space-x-4">
-                                <Link href="#" className="text-gray-400 hover:text-pink-600">
-                                    <Linkedin className="text-xl" />
-                                </Link>
-                                <Link href="#" className="text-gray-400 hover:text-pink-600">
-                                    <Github className="text-xl" />
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="team-card bg-linear-to-b from-white to-blue-50 p-8 text-center shadow-lg">
-                            <div className="w-32 h-32 rounded-full bg-linear-to-r from-blue-400 to-cyan-400 mx-auto mb-6 flex items-center justify-center">
-                                <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center">
-                                    <div className="text-4xl">👩‍🏫</div>
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">ToTo</h3>
-                            <p className="text-blue-600 font-medium mb-4">Marketing Lead</p>
-                            <p className="text-gray-600 mb-6">My mission is to share the FBIMOM vision with families worldwide. I focus on understanding the daily challenges moms face and ensuring our message resonates with empathy. I’m here to build a community where parenting in the digital age feels less like a struggle and more like a shared success.</p>
-                            <div className="flex justify-center space-x-4">
-                                <Link href="#" className="text-gray-400 hover:text-blue-600">
-                                    <Linkedin className="text-xl" />
-                                </Link>
-                                <Link href="#" className="text-gray-400 hover:text-blue-600">
-                                    <GraduationCap className="text-xl" />
-                                </Link>
-                            </div>
-                        </div>
-
+                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {team.map((member) => (
+                            <TeamMemberCard key={member.name} member={member} />
+                        ))}
                     </div>
-
-                    {/* <div className="text-center">
-                        <p className="text-gray-600 mb-8">We're proud to be a diverse, distributed team with members across 8 countries. What unites us is our commitment to protecting children and supporting families.</p>
-                        <Link href="/contact-us" className="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg inline-block">
-                            <MessageCircle className="mr-2 inline-block" /> Meet More of Our Team
-                        </Link>
-                    </div> */}
                 </div>
             </section>
 
@@ -213,4 +192,53 @@ export default function AboutUsPage() {
             </section> */}
         </section>
     )
+}
+
+function TeamMemberCard({ member }: { member: any }) {
+    return (
+        <div className="
+      rounded-2xl bg-white p-8 text-center
+      shadow-sm ring-1 ring-gray-100
+      transition-all duration-300
+      hover:-translate-y-1 hover:shadow-xl
+    ">
+            {/* Avatar */}
+            <div className="relative mx-auto mb-6 h-32 w-32">
+                <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="rounded-full object-cover"
+                />
+            </div>
+
+            {/* Name */}
+            <h3 className="text-xl font-semibold text-gray-900">
+                {member.name}
+            </h3>
+
+            {/* Role */}
+            <p className={`mt-1 text-sm font-medium ${member.roleColor}`}>
+                {member.role}
+            </p>
+
+            {/* Bio */}
+            <p className="mt-4 text-sm leading-relaxed text-gray-600">
+                {member.bio}
+            </p>
+
+            {/* Socials */}
+            <div className="mt-6 flex justify-center gap-4">
+                {member.socials && member.socials.map((social: any, i: number) => (
+                    <Link
+                        key={i}
+                        href={social.href}
+                        className="text-gray-400 transition hover:text-gray-700"
+                    >
+                        <social.icon className="h-5 w-5" />
+                    </Link>
+                ))}
+            </div>
+        </div>
+    );
 }

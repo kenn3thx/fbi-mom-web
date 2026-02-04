@@ -19,7 +19,7 @@ export async function PublicFooter() {
             {settings.siteName}
           </span> */}
                         </Link>
-                        <div className=" flex flex-col md:flex-row justify-between items-center">
+                        <div className=" flex flex-row justify-between items-center">
 
 
                             <div className="flex space-x-6">
