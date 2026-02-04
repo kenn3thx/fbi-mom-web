@@ -107,52 +107,14 @@ export function PublicHeaderClient() {
             </div>
 
             {/* Mobile Menu */}
+            {/* Mobile menu */}
             {open && (
-                <div className="md:hidden bg-white border-t border-gray-100">
-                    <div className="px-4 py-6 space-y-4">
-                        <Link onClick={() => setOpen(false)} href="/#features">
-                            Features
-                        </Link>
-
-                        <Link onClick={() => setOpen(false)} href="/#how-it-works">
-                            How It Works
-                        </Link>
-
-                        <Link onClick={() => setOpen(false)} href="/download">
-                            Download
-                        </Link>
-
-                        {/* Mobile About */}
-                        <button
-                            onClick={() => setAboutOpen(!aboutOpen)}
-                            className="flex w-full items-center justify-between font-medium"
-                        >
-                            About
-                            <ChevronDown
-                                className={`h-4 w-4 transition ${aboutOpen ? "rotate-180" : ""
-                                    }`}
-                            />
-                        </button>
-
-                        {aboutOpen && (
-                            <div className="ml-4 space-y-2 text-sm text-gray-600">
-                                <Link onClick={() => setOpen(false)} href="/about-us">
-                                    About Us
-                                </Link>
-                                <Link onClick={() => setOpen(false)} href="/privacy-policy">
-                                    Privacy Policy
-                                </Link>
-                                <Link onClick={() => setOpen(false)} href="/terms-of-service">
-                                    Terms of Service
-                                </Link>
-                            </div>
-                        )}
-
-                        <Link
-                            onClick={() => setOpen(false)}
-                            href="/get-started"
-                            className="block text-center rounded-full bg-purple-600 py-3 font-semibold text-white"
-                        >
+                <div className="md:hidden bg-white px-4 py-6 shadow-lg">
+                    <div className="flex flex-col space-y-4">
+                        <Link onClick={() => setOpen(false)} href="/#features" className='py-2 px-4 font-bold'>Features</Link>
+                        <Link onClick={() => setOpen(false)} href="/#how-it-works" className='py-2 px-4 font-bold'>How It Works</Link>
+                        <Link onClick={() => setOpen(false)} href="/about-us" className='py-2 px-4 font-bold' >About Us</Link>
+                        <Link onClick={() => setOpen(false)} href="/get-started" className="font-semibold py-2 px-4 text-primary">
                             Get Started
                         </Link>
                     </div>
