@@ -1,6 +1,7 @@
 import { AppSettings } from '@/seed';
 import { ArrowRight, Book, Calendar, Check, Clock, Headset, Mail, MailCheck, MailIcon, MessageCircle, Paintbrush, Paperclip, Phone, SendIcon, User, Video } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 // import { settingsService } from '@/services/settings.service';
 
@@ -21,7 +22,7 @@ export default async function AboutPage() {
   return (
     <section>
       {/* Hero Section */}
-      <section className="py-12 md:py-20 px-4">
+      <section className="py-12 md:py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 mb-12 lg:mb-0">
@@ -29,7 +30,7 @@ export default async function AboutPage() {
                 <Headset className="inline-block ml-2 w-5 h-5" /> We're Here to Help
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-4xl font-bold mb-6 leading-tight text-[#655B50]">
                 Contact FBI Mom Support
               </h1>
 
@@ -60,42 +61,17 @@ export default async function AboutPage() {
               </div>
             </div>
 
-            <div className="lg:w-1/2 flex justify-center">
-              <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full primary-gradient flex items-center justify-center floating">
-                  <div className="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl">
-                    <div className="text-center p-6">
-                      <div className="text-6xl mb-4">📱</div>
-                      <h3 className="text-2xl font-bold mb-2 text-primary">Need Help?</h3>
-                      <p className="text-gray-600">We're just a message away</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating elements */}
-                <div className="absolute -top-4 left-0 bg-white p-4 rounded-2xl shadow-xl">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-3">
-                      <MessageCircle className="text-purple-600 text-xl" />
-                    </div>
-                    <div>
-                      <p className="font-bold">Live Chat</p>
-                      <p className="text-sm text-gray-500">Fast response</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute -bottom-4 right-0 bg-white p-4 rounded-2xl shadow-xl" style={{ animationDelay: '1s' }}>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-3">
-                      <Mail className="text-pink-600 text-xl" />
-                    </div>
-                    <div>
-                      <p className="font-bold">Email</p>
-                      <p className="text-sm text-gray-500">support@fbimom.com</p>
-                    </div>
-                  </div>
-                </div>
+            {/* Right image */}
+            <div className="lg:w-1/2 md:px-12">
+              <div className=" overflow-hidden">
+                <Image
+                  src="/uploads/images/hero_section_contact.jpg" // your existing image
+                  alt="Mother protecting child online"
+                  width={420}
+                  height={600}
+                  className="object-cover rounded-3xl shadow-xl"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -197,7 +173,7 @@ export default async function AboutPage() {
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-4">Send Us a Message</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-[#655B50]">Send Us a Message</h2>
             <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">Fill out the form below and our team will get back to you as soon as possible. For faster response, try our live chat.</p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -205,25 +181,17 @@ export default async function AboutPage() {
                 <form id="contact-form" className="space-y-6">
 
                   <div>
-                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address *</label>
-                    <input type="email" id="email" className="form-input" placeholder="you@example.com" required />
+                    <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email Address <span className='text-red-500'>*</span></label>
+                    <input type="email" id="email" className="form-input" placeholder="Enter your email address" required />
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">Subject *</label>
-                    <select id="subject" className="form-input" defaultValue={""} required>
-                      <option value="" disabled>Select a topic</option>
-                      <option value="technical">Technical Support</option>
-                      <option value="billing">Billing & Account</option>
-                      <option value="parenting">Parenting Guidance</option>
-                      <option value="feature">Feature Request</option>
-                      <option value="partnership">Partnership Inquiry</option>
-                      <option value="other">Other</option>
-                    </select>
+                    <label htmlFor="subject" className="block text-gray-700 font-bold mb-2">What can we help you with? <span className='text-red-500'>*</span></label>
+                    <input type="text" id="subject" className="form-input" placeholder="Describe your issue or suggestion here..." required />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your Message *</label>
+                    <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Your Message <span className='text-red-500'>*</span></label>
                     <textarea id="message" rows={6} className="form-input" placeholder="Please describe your question or issue in detail..." required></textarea>
                   </div>
 
@@ -283,7 +251,7 @@ export default async function AboutPage() {
                     </div>
                     <div>
                       <p className="font-bold text-blue-800">Email</p>
-                      <p className="text-blue-700">Within 2 hours (business hours)</p>
+                      <p className="text-blue-700">Within 24 hours (business hours)</p>
                     </div>
                   </div>
                 </div>

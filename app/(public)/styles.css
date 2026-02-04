@@ -1,5 +1,7 @@
         .gradient-bg {
-            background: linear-gradient(135deg, #f8f7ff 0%, #e6e5ff 100%);
+            /* background: linear-gradient(135deg, #f8f7ff 0%, #e6e5ff 100%); */
+            /* background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%); background-blend-mode: screen; */
+            background: linear-gradient(135deg, #ffffff 0%, #f6efe9 100%);
         }
 
         .primary-gradient {
@@ -12,8 +14,13 @@
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            /* background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); */
+            background: oklch(70.7% 0.165 254.624);
             transition: all 0.3s ease;
+        }
+
+        .bg-footer {
+            background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
         }
 
         .btn-primary:hover {

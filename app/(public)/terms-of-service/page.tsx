@@ -270,12 +270,7 @@ export default function TermsOfServicePage() {
                         </div>
                     </div>
 
-                    {/* Back to Home */}
-                    <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-                        <a href="/" className="inline-block text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition" style={{ background: 'linear-gradient(90deg, #6a5acd, #ff7bac)' }}>
-                            <Home className="inline-block mr-2" size={20} /> Back to Home
-                        </a>
-                    </div>
+                    
                 </div>
             </section>
         </div>

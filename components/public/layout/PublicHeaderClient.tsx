@@ -12,7 +12,7 @@ export function PublicHeaderClient() {
     const [aboutOpen, setAboutOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+        <nav className="sticky top-0 z-50 bg-[#fdf9f2] backdrop-blur border-b border-gray-100">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3">
@@ -26,21 +26,21 @@ export function PublicHeaderClient() {
                 <div className="hidden md:flex items-center gap-8">
                     <Link
                         href="/#features"
-                        className="font-bold text-gray-700 hover:text-purple-600 transition"
+                        className="font-bold text-[#655B50] hover:text-blue-400 transition"
                     >
                         Features
                     </Link>
 
                     <Link
                         href="/#how-it-works"
-                        className="font-bold text-gray-700 hover:text-purple-600 transition"
+                        className="font-bold text-[#655B50] hover:text-blue-400 transition"
                     >
                         How It Works
                     </Link>
 
                     <Link
                         href="/download"
-                        className="font-bold text-gray-700 hover:text-purple-600 transition"
+                        className="font-bold text-[#655B50] hover:text-blue-400 transition"
                     >
                         Download
                     </Link>
@@ -48,36 +48,36 @@ export function PublicHeaderClient() {
                     {/* About dropdown */}
                     <div className="relative group">
                         <button
-                            className="flex items-center gap-1 font-bold text-gray-700 hover:text-purple-600 transition"
+                            className="flex items-center gap-1 font-bold text-[#655B50] hover:text-blue-400 transition"
                             aria-haspopup="true"
                         >
                             About
-                            <ChevronDown className="h-4 w-4 mt-0.5" />
+                            <ChevronDown className="h-6 w-6 mt-0.5" />
                         </button>
 
                         <div className="absolute left-0 top-full mt-3 w-56 rounded-xl bg-white shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <div className="py-2">
+                            <div className="py-2 gradient-bg">
                                 <Link
                                     href="/about-us"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 font-bold"
+                                    className="block px-4 py-2 text-sm text-[#655B50] hover:bg-stone-200 font-bold"
                                 >
                                     About Us
                                 </Link>
                                 <Link
                                     href="/contact"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 font-bold"
+                                    className="block px-4 py-2 text-sm text-[#655B50] hover:bg-stone-200 font-bold"
                                 >
                                     Contact
                                 </Link>
                                 <Link
                                     href="/privacy-policy"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 font-bold"
+                                    className="block px-4 py-2 text-sm text-[#655B50] hover:bg-stone-200 font-bold"
                                 >
                                     Privacy Policy
                                 </Link>
                                 <Link
                                     href="/terms-of-service"
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 font-bold"
+                                    className="block px-4 py-2 text-sm text-[#655B50] hover:bg-stone-200 font-bold"
                                 >
                                     Terms of Service
                                 </Link>
@@ -99,7 +99,7 @@ export function PublicHeaderClient() {
                 {/* Mobile toggle */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="md:hidden text-gray-700"
+                    className="md:hidden text-[#655B50]"
                     aria-label="Toggle menu"
                 >
                     {open ? <X /> : <Menu />}

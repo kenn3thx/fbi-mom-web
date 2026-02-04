@@ -62,7 +62,7 @@ export default async function HomePage() {
               <p className="text-lg italic mb-6">"Finally an app made for moms, not engineers. I can actually understand how to use it and it gives me peace of mind."</p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center mr-3">
-                  <User className="text-purple-600" />
+                  <User className="text-blue-400" />
                 </div>
                 <div>
                   <p className="font-bold">Sarah J.</p>
@@ -123,7 +123,7 @@ export default async function HomePage() {
             </div>
 
             <div className="trust-badge p-4 rounded-xl shadow-md flex items-center">
-              <Shield className='text-3xl mr-3 text-purple-600' />
+              <Shield className='text-3xl mr-3 text-blue-400' />
               <div>
                 <p className="font-bold">Secure Encryption</p>
                 <p className="text-sm text-gray-600">Bank-level security</p>
@@ -175,7 +175,7 @@ export default async function HomePage() {
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="flex items-center mb-6">
                 <div className="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <Timer className="text-purple-600 text-2xl" />
+                  <Timer className="text-blue-400 text-2xl" />
                 </div>
                 <h3 className="text-xl font-bold">Parental Control Gap</h3>
               </div>
@@ -193,7 +193,7 @@ export default async function HomePage() {
       {/* Solutions */}
       <section className="py-16 px-4 ">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">How FBI Mom Protects Your Child</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#655B50]">How FBI Mom Protects Your Child</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="feature-card bg-white p-8 rounded-2xl border border-gray-100 shadow-md">
@@ -202,7 +202,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Screen Time Monitoring</h3>
               <p className="text-gray-600 mb-6">Track how much time your child spends on apps and devices. Set daily limits and get detailed reports on their digital habits.</p>
-              {/* <div className="flex items-center text-purple-600 font-medium">
+              {/* <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div> */}
@@ -214,7 +214,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">App & Website Blocking</h3>
               <p className="text-gray-600 mb-6">Block unsafe apps and inappropriate websites instantly. Create custom blocklists or use our pre-configured safety categories.</p>
-              {/* <div className="flex items-center text-purple-600 font-medium">
+              {/* <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div> */}
@@ -226,7 +226,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Real-Time Alerts</h3>
               <p className="text-gray-600 mb-6">Get notified when risky behavior is detected. Receive alerts for inappropriate content, excessive usage, or attempted blocked site access.</p>
-              {/* <div className="flex items-center text-purple-600 font-medium">
+              {/* <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div> */}
@@ -238,7 +238,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Kid-Friendly Boundaries</h3>
               <p className="text-gray-600 mb-6">Set rules without spying or creating conflict. Our approach encourages responsibility and healthy digital habits.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div>
@@ -250,7 +250,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Simple Setup in Minutes</h3>
               <p className="text-gray-600 mb-6">No technical skills needed — made for busy moms. Get up and running in less than 5 minutes with our step-by-step guide.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div>
@@ -262,7 +262,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Family Communication Tools</h3>
               <p className="text-gray-600 mb-6">Promote open dialogue with built-in conversation starters about online safety and responsible digital citizenship.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
               </div>
@@ -367,7 +367,7 @@ export default async function HomePage() {
               </div>
 
               <div className="flex items-start mb-8">
-                <Eye className="text-3xl text-purple-600 mr-4 mt-1" />
+                <Eye className="text-3xl text-blue-400 mr-4 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Transparent permissions</h3>
                   <p className="text-gray-600">We explain exactly what data we collect and why, with clear options for parents to control privacy settings.</p>
@@ -388,7 +388,7 @@ export default async function HomePage() {
               <h3 className="text-2xl font-bold mb-6">"Protection without punishment."</h3>
               <p className="text-gray-700 text-lg mb-8">Our philosophy centers on guiding children to make smart choices online, rather than punishing them for mistakes. We believe in teaching digital responsibility.</p>
               {/* <div className="inline-block px-6 py-3 bg-white rounded-full font-bold text-purple-700 shadow-md">
-                <Quote className="inline-block text-purple-600 mr-2" /> Ethical Monitoring
+                <Quote className="inline-block text-blue-400 mr-2" /> Ethical Monitoring
               </div> */}
             </div>
           </div>
@@ -412,13 +412,13 @@ export default async function HomePage() {
       {/* FAQ Section */}
       <section id="faq" className="py-16 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#655B50]">Frequently Asked Questions</h2>
 
           <div className="max-w-3xl mx-auto">
             <div className="faq-item border border-gray-200">
               <div className="faq-question p-6 flex justify-between items-center">
                 <h3 className="text-xl font-bold">Is FBI Mom safe to use?</h3>
-                <ChevronDown className="text-purple-600" />
+                <ChevronDown className="text-blue-400" />
               </div>
               <div className="faq-answer p-6 pt-0 bg-gray-50">
                 <p className="text-gray-600">Yes, FBI Mom uses bank-level encryption and privacy-first design. We're compliant with GDPR, COPPA, and other privacy regulations to ensure your child's data is protected with the highest security standards.</p>
@@ -428,7 +428,7 @@ export default async function HomePage() {
             <div className="faq-item border border-gray-200">
               <div className="faq-question p-6 flex justify-between items-center">
                 <h3 className="text-xl font-bold">Can my child know about the monitoring?</h3>
-                <ChevronDown className="text-purple-600" />
+                <ChevronDown className="text-blue-400" />
               </div>
               <div className="faq-answer p-6 pt-0 bg-gray-50">
                 <p className="text-gray-600">Absolutely. FBI Mom promotes open communication and trust. We provide conversation guides to help parents explain why online safety matters. Many parents find that being transparent about monitoring actually strengthens their relationship with their child.</p>
@@ -438,7 +438,7 @@ export default async function HomePage() {
             <div className="faq-item border border-gray-200">
               <div className="faq-question p-6 flex justify-between items-center">
                 <h3 className="text-xl font-bold">Does it work on Android & iOS?</h3>
-                <ChevronDown className="text-purple-600" />
+                <ChevronDown className="text-blue-400" />
               </div>
               <div className="faq-answer p-6 pt-0 bg-gray-50">
                 <p className="text-gray-600">Yes, FBI Mom supports both Android and iOS platforms. The parent app works on both platforms, and you can monitor children's devices regardless of the operating system they use.</p>
@@ -448,7 +448,7 @@ export default async function HomePage() {
             <div className="faq-item border border-gray-200">
               <div className="faq-question p-6 flex justify-between items-center">
                 <h3 className="text-xl font-bold">Is this better than other parental control apps?</h3>
-                <ChevronDown className="text-purple-600" />
+                <ChevronDown className="text-blue-400" />
               </div>
               <div className="faq-answer p-6 pt-0 bg-gray-50">
                 <p className="text-gray-600">FBI Mom is designed specifically for moms — simpler, clearer, and more ethical than many technical solutions. We focus on the parent-child relationship rather than just surveillance, with tools designed to foster trust and teach responsible digital citizenship.</p>
@@ -458,7 +458,7 @@ export default async function HomePage() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">Have more questions? We're here to help.</p>
-            <Link href="/contact" className="inline-block border-2 border-purple-600 text-purple-600 font-bold py-3 px-8 rounded-full hover:bg-purple-600 hover:text-white transition">
+            <Link href="/contact" className="inline-block border-2 border-blue-400 text-blue-400 font-bold py-3 px-8 rounded-full hover:bg-blue-400 hover:text-white transition">
               <i className="fas fa-question-circle mr-2"></i> Contact Support
             </Link>
           </div>

@@ -25,24 +25,31 @@ export default function HeroSection() {
         setIsPlaying(!isPlaying);
     };
 
+    const handleVideoEnded = () => {
+        if (!videoRef.current) return;
+
+        videoRef.current.currentTime = 0;
+        setIsPlaying(false);
+    };
+
     return (
-        <section className="relative overflow-hidden bg-white py-10 md:py-20">
+        <section className="relative overflow-hidden py-10 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="grid gap-16 lg:grid-cols-2 items-center">
 
                     {/* LEFT */}
-                    <div>
+                    <div className="order-2 lg:order-1">
                         {/* <div className="inline-flex items-center rounded-full bg-purple-50 px-4 py-2 text-sm font-medium text-purple-700 mb-6">
                             <StarIcon className="mr-2 h-4 w-4 fill-purple-500" />
                             Trusted by 50,000+ moms worldwide
                         </div> */}
 
-                        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-gray-900 mb-6">
+                        <h1 className="text-4xl md:text-4xl xl:text-4xl font-bold leading-tight text-gray-600 mb-6">
                             {/* Smart Parental Control App <br className="hidden sm:block" />
                             <span className="text-purple-600">
                                 to Protect Your Child Online
                             </span> */}
-                            Reward <span className="text-purple-600">Good Habits</span> with Screen Time
+                            Reward Good Habits with Screen Time
                         </h1>
 
                         {/* <p className="text-lg md:text-xl text-gray-600 max-w-xl mb-8">
@@ -80,11 +87,11 @@ export default function HeroSection() {
                     </div>
 
                     {/* RIGHT – VIDEO */}
-                    <div className="flex justify-center lg:justify-end">
+                    <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-180">
 
                             {/* Glow */}
-                            <div className="absolute -inset-8 rounded-[40px] bg-purple-500/25 blur-3xl" />
+                            <div className="absolute -inset-8 rounded-[20px] bg-orange-100 blur-3xl" />
 
                             <div className="group relative aspect-video overflow-hidden rounded-4xl bg-black shadow-2xl">
 
@@ -93,8 +100,10 @@ export default function HeroSection() {
                                     className="absolute inset-0 h-full w-full object-cover"
                                     src={video.src}
                                     playsInline
-                                    preload="metadata"
+                                    preload="none"
+                                    muted
                                     poster={video.poster}
+                                    onEnded={handleVideoEnded}
                                 />
 
                                 {/* Gradient overlay */}
@@ -110,18 +119,7 @@ export default function HeroSection() {
                                 >
                                     {
                                         !isPlaying && (
-                                            <div
-                                                className="
-                                          flex h-20 w-20 items-center justify-center
-                                          rounded-full bg-white/90
-                                          backdrop-blur
-                                          shadow-xl
-                                          transition
-                                          group-hover:scale-110
-                                        "
-                                            >
-                                                <Play className="ml-1 h-8 w-8 text-purple-600" />
-                                            </div>
+                                            <Play className="ml-1 h-8 w-8 text-white" />
                                         )
                                     }
 

@@ -34,7 +34,7 @@ export default function DownloadPage() {
             <section className="container mx-auto max-w-6xl px-4 py-20">
                 {/* Header */}
                 <header className="text-center mb-20">
-                    <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-4xl md:text-6xl font-bold text-[#655B50] mb-6">
                         Download FBI Mom
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ export default function DownloadPage() {
 
                 {/* Platforms */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-10">
+                    <h2 className="text-3xl font-bold text-[#655B50] mb-10">
                         Choose your platform
                     </h2>
 

@@ -26,7 +26,7 @@ export default function AboutUsPage() {
                                 <Heart className="inline-block mr-1" />Our Story
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                            <h1 className="text-4xl md:text-4xl font-bold mb-6 leading-tight text-[#655B50]">
                                 Protecting Children in the Digital World
                             </h1>
 
@@ -94,7 +94,7 @@ export default function AboutUsPage() {
             {/* Meet the Team*/}
             <section id="team" className="py-16 px-4 bg-white">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-4">Meet Our Small Team, Big Vision</h2>
+                    <h2 className="text-3xl font-bold text-center mb-4 text-[#655B50]">Meet Our Small Team, Big Vision</h2>
                     <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">FBIMOM was born from the collaboration of three passionate creators who believe that parental control shouldn't just be about restrictions. We worked together to build a tool that empowers moms and rewards kids, making daily life easier for everyone, one star at a time.</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
