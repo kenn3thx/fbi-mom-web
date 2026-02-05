@@ -11,19 +11,19 @@ export function VideoDemoSection() {
     const videos = [
         {
             title: "Transform Chores into Achievements",
-            desc: " Establish a positive daily routine by turning household responsibilities into rewarding goals. With FBIMOM, you can easily create custom daily tasks—like tidying the room or doing homework. Once your child completes a task, you validate it with a single tap, awarding them Star Credits. It’s the perfect way to build lasting habits while making responsibility fun!",
+            desc: "Build healthy habits with love. FBIMOM helps you turn everyday tasks like homework or cleaning into positive moments. With one tap, you reward your child with stars, making responsibility feel encouraging and fun.",
             src: "/uploads/video/video_1.mp4",
             poster: "/uploads/images/poster_video_demo_1.webp",
         },
         {
             title: "How the Star Economy Works",
-            desc: "FBIMOM creates a bridge between effort and reward. Parents create tasks, and children mark them as 'Done' once finished. After your validation, stars are instantly added to the child's balance. Your child can then visit the Rewards Store to trade their stars for extra screen time or special prizes you’ve created—like a movie night or a favorite treat!",
+            desc: "FBIMOM makes rewards easy. You give tasks, your child completes them, and after you approve, they earn stars. Those stars can be used for screen time or small rewards you choose.",
             src: "/uploads/video/video_2.mp4",
             poster: "/uploads/images/poster_video_demo_2.webp",
         },
         {
-            title: " Effort Rewarded: More Screen Time, Happier Kids",
-            desc: "See the magic in action! This video beautifully illustrates how your child directly benefits from their efforts. As they help with daily tasks, they instantly earn valuable Star Credits. These stars unlock their favorite digital activities, allowing them to enjoy their screen time knowing they've earned it through responsibility and teamwork. It’s the ultimate win-win for parents and children!",
+            title: "Effort Rewarded: More Screen Time, Happier Kids",
+            desc: "See how it works. Your child completes tasks, earns stars, and uses them for screen time. They enjoy their time more—and you know they earned it. A win for everyone.",
             src: "/uploads/video/video_3.mp4",
             poster: "/uploads/images/poster_video_demo_3.webp",
         },

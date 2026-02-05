@@ -6,6 +6,8 @@ import { AppSettings } from '@/seed';
 import { ArrowRight, Ban, Bed, Bell, Brain, ChartLine, CheckCircle, ChevronDown, Clock, Download, Eye, Heart, Lock, MessageCircle, PlayCircle, Quote, Rocket, Shield, ShieldUser, Star, StarIcon, Timer, TriangleAlert, User } from "lucide-react";
 import { VideoDemoSection } from '@/components/public/home/VideoDemoSection';
 import HeroSection from '@/components/public/home/HeroSection';
+import Image from 'next/image';
+import FAQSection from '@/components/public/home/FAQSection';
 
 
 /**
@@ -37,6 +39,68 @@ export default async function HomePage() {
   const settings = AppSettings;
   //const blogs = await blogService.getPublishedBlogs();
   //const latestBlogs = blogs.slice(0, 6);
+
+
+  const audiences = [
+    {
+      title: "Moms with kids aged 6–16",
+      description:
+        "Perfect for children starting to explore the digital world up to teenagers needing responsible boundaries.",
+      image: "/uploads/images/b3d3f889-ae00-4683-ab9b-da23d31836b0.jpeg",
+    },
+    {
+      title: "First smartphone families",
+      description:
+        "Essential for families giving kids their first smartphone, establishing healthy habits from day one.",
+      image: "/uploads/images/photo_6061955376480980273_m.jpg",
+    },
+    {
+      title: "Worried parents",
+      description:
+        "For parents concerned about online dangers but unsure how to protect their children effectively.",
+      image: "/uploads/images/photo_6061955376480980274_m.jpg",
+    },
+  ];
+
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is FBI Mom safe to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, FBI Mom uses bank-level encryption and privacy-first design. We comply with GDPR, COPPA, and other privacy regulations to keep children’s data secure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my child know about the monitoring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. FBI Mom encourages transparency and trust. Many parents find that open communication strengthens the parent-child relationship."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on Android & iOS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, FBI Mom supports both Android and iOS platforms for parents and children."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this better than other parental control apps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FBI Mom focuses on trust, education, and ethical digital parenting rather than pure surveillance."
+        }
+      }
+    ]
+  };
 
   return (
     <section className='gradient-bg'>
@@ -311,34 +375,38 @@ export default async function HomePage() {
       </section> */}
 
       {/* Target Audience */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Who Is FBImom For?</h2>
+      <section className="bg-white py-14 sm:py-20" aria-labelledby="target-audience">
+        <div className="mx-auto max-w-7xl px-4">
+          <h2 id="target-audience" className="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-10">
+            Who Is FBImom For?
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="text-center p-6">
-              <div className="text-5xl mb-6">👩‍👧</div>
-              <h3 className="text-xl font-bold mb-4">Moms with kids aged 6–16</h3>
-              <p className="text-gray-600">Perfect for children starting to explore the digital world up to teenagers needing responsible boundaries.</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {audiences.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-shadow"
+              >
+                <div className="relative w-40 h-24 mb-5">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover rounded-xl"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 200px, 240px"
+                    priority={index === 0}
+                  />
+                </div>
 
-            <div className="text-center p-6">
-              <div className="text-5xl mb-6">📱</div>
-              <h3 className="text-xl font-bold mb-4">First smartphone families</h3>
-              <p className="text-gray-600">Essential for families giving kids their first smartphone, establishing healthy habits from day one.</p>
-            </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
 
-            <div className="text-center p-6">
-              <div className="text-5xl mb-6">🏫</div>
-              <h3 className="text-xl font-bold mb-4">Worried parents</h3>
-              <p className="text-gray-600">For parents concerned about online dangers but unsure how to protect their children effectively.</p>
-            </div>
-
-            {/* <div className="text-center p-6">
-              <div className="text-5xl mb-6">❤️</div>
-              <h3 className="text-xl font-bold mb-4">Trust-building moms</h3>
-              <p className="text-gray-600">For moms who want safety without control battles, fostering trust and open communication.</p>
-            </div> */}
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -410,60 +478,14 @@ export default async function HomePage() {
       </section> */}
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#655B50]">Frequently Asked Questions</h2>
+      <FAQSection />
 
-          <div className="max-w-3xl mx-auto">
-            <div className="faq-item border border-gray-200">
-              <div className="faq-question p-6 flex justify-between items-center">
-                <h3 className="text-xl font-bold">Is FBI Mom safe to use?</h3>
-                <ChevronDown className="text-blue-400" />
-              </div>
-              <div className="faq-answer p-6 pt-0 bg-gray-50">
-                <p className="text-gray-600">Yes, FBI Mom uses bank-level encryption and privacy-first design. We're compliant with GDPR, COPPA, and other privacy regulations to ensure your child's data is protected with the highest security standards.</p>
-              </div>
-            </div>
-
-            <div className="faq-item border border-gray-200">
-              <div className="faq-question p-6 flex justify-between items-center">
-                <h3 className="text-xl font-bold">Can my child know about the monitoring?</h3>
-                <ChevronDown className="text-blue-400" />
-              </div>
-              <div className="faq-answer p-6 pt-0 bg-gray-50">
-                <p className="text-gray-600">Absolutely. FBI Mom promotes open communication and trust. We provide conversation guides to help parents explain why online safety matters. Many parents find that being transparent about monitoring actually strengthens their relationship with their child.</p>
-              </div>
-            </div>
-
-            <div className="faq-item border border-gray-200">
-              <div className="faq-question p-6 flex justify-between items-center">
-                <h3 className="text-xl font-bold">Does it work on Android & iOS?</h3>
-                <ChevronDown className="text-blue-400" />
-              </div>
-              <div className="faq-answer p-6 pt-0 bg-gray-50">
-                <p className="text-gray-600">Yes, FBI Mom supports both Android and iOS platforms. The parent app works on both platforms, and you can monitor children's devices regardless of the operating system they use.</p>
-              </div>
-            </div>
-
-            <div className="faq-item border border-gray-200">
-              <div className="faq-question p-6 flex justify-between items-center">
-                <h3 className="text-xl font-bold">Is this better than other parental control apps?</h3>
-                <ChevronDown className="text-blue-400" />
-              </div>
-              <div className="faq-answer p-6 pt-0 bg-gray-50">
-                <p className="text-gray-600">FBI Mom is designed specifically for moms — simpler, clearer, and more ethical than many technical solutions. We focus on the parent-child relationship rather than just surveillance, with tools designed to foster trust and teach responsible digital citizenship.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Have more questions? We're here to help.</p>
-            <Link href="/contact" className="inline-block border-2 border-blue-400 text-blue-400 font-bold py-3 px-8 rounded-full hover:bg-blue-400 hover:text-white transition">
-              <i className="fas fa-question-circle mr-2"></i> Contact Support
-            </Link>
-          </div>
-        </div>
-      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
 
     </section>
   );
