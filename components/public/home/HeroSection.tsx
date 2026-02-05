@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { ShieldUser, CheckCircle, Play, Volume2, VolumeOff } from "lucide-react";
 
@@ -8,6 +8,21 @@ export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
+
+  const videos = [
+    {
+      src: "/uploads/video/video_intro_hero.mp4",
+      poster: "/uploads/images/poster_video_intro_hero.webp",
+    },
+    {
+      src: "/uploads/video/video_intro_hero_2.mp4",
+      poster: "/uploads/images/poster_video_intro_hero_2.png",
+    },
+    {
+      src: "/uploads/video/video_intro_hero_3.mp4",
+      poster: "/uploads/images/poster_video_intro_hero_3.png",
+    }
+  ];
 
   const video = {
     src: "/uploads/video/video_intro_hero.mp4",
@@ -20,7 +35,7 @@ export default function HeroSection() {
 
     try {
       if (videoEl.paused) {
-        videoEl.muted = true; // 🔥 luôn muted khi play lần đầu
+        videoEl.muted = true;
         await videoEl.play();
         setIsPlaying(true);
         setIsMuted(true);
@@ -50,6 +65,10 @@ export default function HeroSection() {
     videoEl.pause();
     setIsPlaying(false);
   };
+
+  const selectedVideo = useMemo(() => {
+    return videos[Math.floor(Math.random() * videos.length)];
+  }, []);
 
   return (
     <section className="relative overflow-hidden py-10 md:py-20">
@@ -103,8 +122,8 @@ export default function HeroSection() {
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover"
-                  src={video.src}
-                  poster={video.poster}
+                  src={selectedVideo.src}
+                  poster={selectedVideo.poster}
                   playsInline
                   muted
                   preload="metadata"
@@ -132,7 +151,7 @@ export default function HeroSection() {
                     className="absolute bottom-4 left-4 rounded-full bg-black/60 p-2 text-white hover:bg-black/80"
                   >
                     {
-                        isMuted ? <VolumeOff className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />
+                      isMuted ? <VolumeOff className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />
                     }
                   </button>
                 )}

@@ -452,7 +452,18 @@ export default async function HomePage() {
             </div>
 
             <div className="bg-linear-to-br from-blue-50 to-purple-50 p-10 rounded-3xl text-center">
-              <div className="text-7xl mb-6">🛡️</div>
+              <div className="text-7xl mb-6 flex flex-col items-center">
+                <div className="relative w-40 h-24 mb-5 ">
+                  <Image
+                    src={'/uploads/images/photo_6061955376480980333_m.jpg'}
+                    alt={'fbimom'}
+                    fill
+                    className="object-cover rounded-xl"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 200px, 240px"
+                    priority={true}
+                  />
+                </div>
+              </div>
               <h3 className="text-2xl font-bold mb-6">"Protection without punishment."</h3>
               <p className="text-gray-700 text-lg mb-8">Our philosophy centers on guiding children to make smart choices online, rather than punishing them for mistakes. We believe in teaching digital responsibility.</p>
               {/* <div className="inline-block px-6 py-3 bg-white rounded-full font-bold text-purple-700 shadow-md">
