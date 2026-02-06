@@ -1,3 +1,4 @@
+import ContactForm from '@/components/public/contact/ContactForm';
 import { AppSettings } from '@/seed';
 import { ArrowRight, Book, Calendar, Check, Clock, Headset, Mail, MailCheck, MailIcon, MessageCircle, Paintbrush, Paperclip, Phone, SendIcon, User, Video } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -178,45 +179,8 @@ export default async function AboutPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
-                <form id="contact-form" className="space-y-6">
-
-                  <div>
-                    <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email Address <span className='text-red-500'>*</span></label>
-                    <input type="email" id="email" className="form-input" placeholder="Enter your email address" required />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-gray-700 font-bold mb-2">What can we help you with? <span className='text-red-500'>*</span></label>
-                    <input type="text" id="subject" className="form-input" placeholder="Describe your issue or suggestion here..." required />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Your Message <span className='text-red-500'>*</span></label>
-                    <textarea id="message" rows={6} className="form-input" placeholder="Please describe your question or issue in detail..." required></textarea>
-                  </div>
-
-                  {/* #TODO: RECAPTCHA */}
-                  {/* <div className="flex items-center">
-                    <input type="checkbox" id="consent" className="w-5 h-5 mr-3" required />
-                    <label htmlFor="consent" className="text-gray-700">I agree to the <Link href="/privacy-policy" className="text-purple-600 hover:underline">Privacy Policy</Link> and consent to FBI Mom contacting me regarding my inquiry.</label>
-                  </div> */}
-
-                  <button type="submit" className="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg w-full md:w-auto">
-                    <SendIcon className="inline mr-2 w-5 h-5" /> Send Message
-                  </button>
-
-                  <div id="success-message" className="success-message bg-green-50 border border-green-200 rounded-xl p-6 mt-6">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <Check className="text-green-600 text-xl" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-green-800">Message Sent Successfully!</h3>
-                        <p className="text-green-700">Thank you for contacting FBI Mom. Our support team will respond within 2 hours during business hours.</p>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                
+                <ContactForm />
               </div>
 
               <div>
@@ -257,105 +221,10 @@ export default async function AboutPage() {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </section>
-
-      {/* FAQ & Resources */}
-      {/* <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Quick Help & Resources</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Common Questions</h3>
-
-              <div className="space-y-4">
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <h4 className="font-bold text-lg mb-2">How do I set up screen time limits?</h4>
-                  <p className="text-gray-600 mb-4">Learn how to set healthy screen time boundaries for your child based on their age and needs.</p>
-                  <Link href="#" className="text-purple-600 font-medium flex items-center">
-                    <span>View setup guide</span>
-                    <ArrowRight className="ml-2" />
-                  </Link>
-                </div>
-
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <h4 className="font-bold text-lg mb-2">My child bypassed app blocking. What now?</h4>
-                  <p className="text-gray-600 mb-4">Discover strategies for maintaining boundaries when children try to bypass parental controls.</p>
-                  <Link href="#" className="text-purple-600 font-medium flex items-center">
-                    <span>Learn prevention tips</span>
-                    <ArrowRight className="ml-2" />
-                  </Link>
-                </div>
-
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <h4 className="font-bold text-lg mb-2">Is my child's data secure?</h4>
-                  <p className="text-gray-600 mb-4">Understand our privacy-first approach and how we protect your family's digital footprint.</p>
-                  <Link href="#" className="text-purple-600 font-medium flex items-center">
-                    <span>Read privacy policy</span>
-                    <ArrowRight className="ml-2" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Helpful Resources</h3>
-
-              <div className="space-y-4">
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                      <Book className="text-purple-600 text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">Parenting Guides</h4>
-                      <p className="text-gray-600">Age-appropriate digital safety guides for children 6-16 years old.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
-                      <Video className="text-pink-600 text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">Video Tutorials</h4>
-                      <p className="text-gray-600">Step-by-step video guides for setting up and using FBI Mom features.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <MessageCircle className="text-blue-600 text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">Parent Community</h4>
-                      <p className="text-gray-600">Connect with other parents facing similar digital parenting challenges.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="contact-option bg-white rounded-xl p-6 shadow-md">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                      <Calendar className="text-green-600 text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">Webinar Schedule</h4>
-                      <p className="text-gray-600">Join our free webinars on child online safety and digital parenting.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
 
     </section>
