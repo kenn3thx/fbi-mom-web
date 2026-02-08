@@ -13,12 +13,12 @@ export async function PublicFooter() {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div>
-                        <Link href="/" className="flex items-center gap-3 mb-14">
+                        <a href="/" className="flex items-center gap-3 mb-14">
                             <Image src="/logo-light.png" alt="Logo" width={150} height={32} />
                             {/* <span className="text-xl font-bold text-gray-900">
             {settings.siteName}
           </span> */}
-                        </Link>
+                        </a>
                         <div className=" flex flex-row justify-between items-center">
 
 

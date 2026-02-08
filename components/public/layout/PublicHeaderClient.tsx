@@ -4,23 +4,23 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { AppSettings } from "@/seed";
+//import { AppSettings } from "@/seed";
 
 export function PublicHeaderClient() {
-    const settings = AppSettings;
+    //const settings = AppSettings;
     const [open, setOpen] = useState(false);
-    const [aboutOpen, setAboutOpen] = useState(false);
+    // const [aboutOpen, setAboutOpen] = useState(false);
 
     return (
         <nav className="sticky top-0 z-50 bg-[#fdf9f2] backdrop-blur border-b border-gray-100">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-3">
+                <a href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt="Logo" width={128} height={32} />
                     {/* <span className="text-xl font-bold text-gray-900">
             {settings.siteName}
           </span> */}
-                </Link>
+                </a>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">

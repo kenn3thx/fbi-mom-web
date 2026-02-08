@@ -21,6 +21,14 @@ export default function HeroSection() {
     {
       src: "/uploads/video/video_intro_hero_3.mp4",
       poster: "/uploads/images/poster_video_intro_hero_3.png",
+    },
+    {
+      src: "/uploads/video/video_intro_hero_in.mp4",
+      poster: "/uploads/images/poster_video_intro_hero_in.webp",
+    },
+    {
+      src: "/uploads/video/video_intro_hero_jp.mp4",
+      poster: "/uploads/images/poster_video_intro_hero_jp.webp",
     }
   ];
 

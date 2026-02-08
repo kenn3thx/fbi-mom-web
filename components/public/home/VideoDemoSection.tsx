@@ -18,7 +18,7 @@ export function VideoDemoSection() {
         {
             title: "How the Star Economy Works",
             desc: "FBIMOM makes rewards easy. You give tasks, your child completes them, and after you approve, they earn stars. Those stars can be used for screen time or small rewards you choose.",
-            src: "/uploads/video/video_2.mp4",
+            src: "/uploads/video/video_2_new.mp4",
             poster: "/uploads/images/poster_video_demo_2.webp",
         },
         {
