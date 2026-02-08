@@ -74,9 +74,7 @@ export default function HeroSection() {
     setIsPlaying(false);
   };
 
-  const selectedVideo = useMemo(() => {
-    return videos[Math.floor(Math.random() * videos.length)];
-  }, []);
+  const selectedVideo = videos[Math.floor(Math.random() * videos.length)];
 
   return (
     <section className="relative overflow-hidden py-10 md:py-20">
