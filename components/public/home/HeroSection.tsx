@@ -1,41 +1,51 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ShieldUser, CheckCircle, Play, Volume2, VolumeOff } from "lucide-react";
+
+interface VideoType {
+  src: string,
+  poster: string
+}
+
+const videos: VideoType[] = [
+  {
+    src: "/uploads/video/video_intro_hero.mp4",
+    poster: "/uploads/images/poster_video_intro_hero.webp",
+  },
+  {
+    src: "/uploads/video/video_intro_hero_2.mp4",
+    poster: "/uploads/images/poster_video_intro_hero_2.png",
+  },
+  {
+    src: "/uploads/video/video_intro_hero_3.mp4",
+    poster: "/uploads/images/poster_video_intro_hero_3.png",
+  },
+  {
+    src: "/uploads/video/video_intro_hero_in.mp4",
+    poster: "/uploads/images/poster_video_intro_hero_in.webp",
+  },
+  {
+    src: "/uploads/video/video_intro_hero_jp.mp4",
+    poster: "/uploads/images/poster_video_intro_hero_jp.webp",
+  }
+];
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
+  const [selectedVideo, setSelectedVideo] = useState<VideoType | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const videos = [
-    {
-      src: "/uploads/video/video_intro_hero.mp4",
-      poster: "/uploads/images/poster_video_intro_hero.webp",
-    },
-    {
-      src: "/uploads/video/video_intro_hero_2.mp4",
-      poster: "/uploads/images/poster_video_intro_hero_2.png",
-    },
-    {
-      src: "/uploads/video/video_intro_hero_3.mp4",
-      poster: "/uploads/images/poster_video_intro_hero_3.png",
-    },
-    {
-      src: "/uploads/video/video_intro_hero_in.mp4",
-      poster: "/uploads/images/poster_video_intro_hero_in.webp",
-    },
-    {
-      src: "/uploads/video/video_intro_hero_jp.mp4",
-      poster: "/uploads/images/poster_video_intro_hero_jp.webp",
-    }
-  ];
 
-  const video = {
-    src: "/uploads/video/video_intro_hero.mp4",
-    poster: "/uploads/images/poster_video_intro_hero.webp",
-  };
+  useEffect(() => {
+    setIsLoading(true);
+    const random = videos[Math.floor(Math.random() * videos.length)];
+    setSelectedVideo(random);
+    setIsLoading(false);
+  }, []);
 
   const handleTogglePlay = async () => {
     const videoEl = videoRef.current;
@@ -74,9 +84,6 @@ export default function HeroSection() {
     setIsPlaying(false);
   };
 
-  const selectedVideo = useMemo(() => {
-    return videos[Math.floor(Math.random() * videos.length)];
-  }, []);
 
   return (
     <section className="relative overflow-hidden py-10 md:py-20">
@@ -127,17 +134,23 @@ export default function HeroSection() {
 
               <div className="group relative aspect-video overflow-hidden rounded-4xl bg-black shadow-2xl">
 
-                <video
-                  ref={videoRef}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src={selectedVideo.src}
-                  poster={selectedVideo.poster}
-                  playsInline
-                  muted
-                  preload="metadata"
-                  onEnded={handleVideoEnded}
-                  onPause={() => setIsPlaying(false)}
-                />
+                {isLoading && (
+                  <div className="absolute inset-0 z-10 bg-gray-200 animate-pulse" />
+                )}
+
+                {
+                  selectedVideo != null && <video
+                    ref={videoRef}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    src={selectedVideo.src}
+                    poster={selectedVideo.poster}
+                    playsInline
+                    muted
+                    preload="metadata"
+                    onEnded={handleVideoEnded}
+                    onPause={() => setIsPlaying(false)}
+                  />
+                }
 
                 {/* Gradient overlay */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
