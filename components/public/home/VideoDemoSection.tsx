@@ -61,7 +61,7 @@ export function VideoDemoSection() {
     };
 
     return (
-        <div id="#how-it-works" className="relative w-full bg-white py-24">
+        <div id="#how-it-works" className="relative w-full bg-white py-16">
             <div className="mx-auto max-w-7xl px-4">
 
                 {/* Heading */}

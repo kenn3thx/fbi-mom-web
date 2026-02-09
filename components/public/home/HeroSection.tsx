@@ -87,7 +87,7 @@ export default function HeroSection() {
 
 
   return (
-    <section className="relative overflow-hidden py-10 md:py-20">
+    <section className="relative overflow-hidden py-4 md:py-16">
       <div className="container mx-auto px-4">
         <div className="grid gap-16 lg:grid-cols-2 items-center">
 
@@ -120,14 +120,14 @@ export default function HeroSection() {
             <div className="flex md:flex-row flex-col space-x-8 md:space-x-16">
               <Link
                 href="/get-started"
-                className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 my-2 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
+                className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 my-8 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
               >
                 <ShieldUser className="mr-2 h-5 w-5" />
                 Get Started for Free
               </Link>
 
               <div
-                className="inline-flex items-center justify-center my-2"
+                className="inline-flex items-center justify-center my-8"
               >
                 <Image
                   src={"/uploads/images/donation-icon.gif"}

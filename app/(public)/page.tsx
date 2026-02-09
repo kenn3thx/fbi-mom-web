@@ -375,7 +375,7 @@ export default async function HomePage() {
       </section> */}
 
       {/* Target Audience */}
-      <section className="bg-white py-14 sm:py-20" aria-labelledby="target-audience">
+      <section className="bg-white py-12 sm:py-20" aria-labelledby="target-audience">
         <div className="mx-auto max-w-7xl px-4">
           <h2 id="target-audience" className="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-10">
             Who Is FBImom For?
