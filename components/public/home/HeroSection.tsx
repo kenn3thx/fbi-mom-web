@@ -117,17 +117,17 @@ export default function HeroSection() {
               ))}
             </ul>
 
-            <div className="flex space-x-8 md:space-x-16">
+            <div className="flex md:flex-row flex-col space-x-8 md:space-x-16">
               <Link
                 href="/get-started"
-                className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
+                className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 my-2 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
               >
                 <ShieldUser className="mr-2 h-5 w-5" />
                 Get Started for Free
               </Link>
 
               <div
-                className="inline-flex items-center justify-center"
+                className="inline-flex items-center justify-center my-2"
               >
                 <Image
                   src={"/uploads/images/donation-icon.gif"}
