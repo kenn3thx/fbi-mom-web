@@ -42,7 +42,7 @@ export default function AboutUsPage() {
             // ],
         },
         {
-            name: "ToTo",
+            name: "Toto",
             role: "Marketing Lead",
             roleColor: "text-blue-600",
             image: "/uploads/images/toto.jpeg",
@@ -216,11 +216,6 @@ function TeamMemberCard({ member }: { member: any }) {
             <h3 className="text-xl font-semibold text-gray-900">
                 {member.name}
             </h3>
-
-            {/* Role */}
-            <p className={`mt-1 text-lg font-medium ${member.roleColor}`}>
-                {member.role}
-            </p>
 
             {/* Bio */}
             <p className="mt-4 text-lg leading-relaxed text-gray-600">

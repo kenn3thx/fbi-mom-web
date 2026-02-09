@@ -38,7 +38,7 @@ export default function FAQSection() {
                 </div>
 
                 <div className="text-center mt-12">
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-6 text-lg">
                         Have more questions? We're here to help.
                     </p>
                     <Link

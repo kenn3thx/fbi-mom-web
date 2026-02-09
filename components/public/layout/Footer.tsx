@@ -39,37 +39,37 @@ export async function PublicFooter() {
                     <div>
                         <h4 className="text-xl font-bold mb-6">Product</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/#features" className="text-gray-200 hover:text-white transition">Features</Link></li>
-                            <li><Link href="/download" className="text-gray-200 hover:text-white transition">Download</Link></li>
-                            <li><Link href="/#how-it-works" className="text-gray-200 hover:text-white transition">How It Works</Link></li>
+                            <li><Link href="/#features" className="text-gray-200 hover:text-white transition text-lg">Features</Link></li>
+                            <li><Link href="/download" className="text-gray-200 hover:text-white transition text-lg">Download</Link></li>
+                            <li><Link href="/#how-it-works" className="text-gray-200 hover:text-white transition text-lg">How It Works</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-xl font-bold mb-6">Resources</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/blog" className="text-gray-200 hover:text-white transition">Blog</Link></li>
-                            <li><Link href="/child-safety-tips" className="text-gray-200 hover:text-white transition">Child Safety Tips</Link></li>
-                            <li><Link href="/screen-time-guides" className="text-gray-200 hover:text-white transition">Screen Time Guides</Link></li>
+                            <li><Link href="/blog" className="text-gray-200 hover:text-white transition text-lg">Blog</Link></li>
+                            <li><Link href="/child-safety-tips" className="text-gray-200 hover:text-white transition text-lg">Child Safety Tips</Link></li>
+                            <li><Link href="/screen-time-guides" className="text-gray-200 hover:text-white transition text-lg">Screen Time Guides</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-xl font-bold mb-6">Legal</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/privacy-policy" className="text-gray-200 hover:text-white transition">Privacy Policy</Link></li>
-                            <li><Link href="/terms-of-service" className="text-gray-200 hover:text-white transition">Terms of Service</Link></li>
-                            <li><Link href="/gdpr-compliance" className="text-gray-200 hover:text-white transition">GDPR Compliance</Link></li>
+                            <li><Link href="/privacy-policy" className="text-gray-200 hover:text-white transition text-lg">Privacy Policy</Link></li>
+                            <li><Link href="/terms-of-service" className="text-gray-200 hover:text-white transition text-lg">Terms of Service</Link></li>
+                            <li><Link href="/gdpr-compliance" className="text-gray-200 hover:text-white transition text-lg">GDPR Compliance</Link></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="pt-8 border-t border-gray-500 flex flex-col md:flex-row justify-center items-center">
-                    <p className="text-gray-200 mb-4 md:mb-0">{settings.footerContent || `© ${new Date().getFullYear()} ${settings.siteName}. All rights reserved.`}</p>
+                    <p className="text-gray-200 mb-4 md:mb-0 text-lg">{settings.footerContent || `© ${new Date().getFullYear()} ${settings.siteName}. All rights reserved.`}</p>
 
                 </div>
 
-                <div className="mt-8 text-center text-gray-200 text-sm">
+                <div className="mt-8 text-center text-gray-200 text-lg">
                     <p>Legal Disclaimer: FBIMOM is an independent parental control tool. We are not affiliated with, associated with, authorized by, or in any way officially connected to the Federal Bureau of Investigation (FBI) or any government agency. The name "FBI" in FBIMOM is used for creative branding purposes only.</p>
                 </div>
             </div>
