@@ -265,7 +265,7 @@ export default async function HomePage() {
                 <ChartLine className="text-white text-2xl" />
               </div>
               <h3 className="text-xl font-bold mb-4">Screen Time Monitoring</h3>
-              <p className="text-gray-600 mb-6">Track how much time your child spends on apps and devices. Set daily limits and get detailed reports on their digital habits.</p>
+              <p className="text-lg text-gray-600 mb-6">Track how much time your child spends on apps and devices. Set daily limits and get detailed reports on their digital habits.</p>
               {/* <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
@@ -277,7 +277,7 @@ export default async function HomePage() {
                 <Ban className="text-white text-2xl" />
               </div>
               <h3 className="text-xl font-bold mb-4">App & Website Blocking</h3>
-              <p className="text-gray-600 mb-6">Block unsafe apps and inappropriate websites instantly. Create custom blocklists or use our pre-configured safety categories.</p>
+              <p className="text-lg text-gray-600 mb-6">Block unsafe apps and inappropriate websites instantly. Create custom blocklists or use our pre-configured safety categories.</p>
               {/* <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
@@ -289,7 +289,7 @@ export default async function HomePage() {
                 <Bell className="text-white text-2xl" />
               </div>
               <h3 className="text-xl font-bold mb-4">Real-Time Alerts</h3>
-              <p className="text-gray-600 mb-6">Get notified when risky behavior is detected. Receive alerts for inappropriate content, excessive usage, or attempted blocked site access.</p>
+              <p className="text-lg text-gray-600 mb-6">Get notified when risky behavior is detected. Receive alerts for inappropriate content, excessive usage, or attempted blocked site access.</p>
               {/* <div className="flex items-center text-blue-400 font-medium">
                 <span>Learn more</span>
                 <ArrowRight className="ml-2" />
@@ -398,11 +398,11 @@ export default async function HomePage() {
                   />
                 </div>
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -422,7 +422,7 @@ export default async function HomePage() {
                 <Lock className="text-3xl text-green-600 mr-4 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">No selling child data</h3>
-                  <p className="text-gray-600">We never sell or share your child's data with third parties. Your family's privacy is our top priority.</p>
+                  <p className="text-lg text-gray-600">We never sell or share your child's data with third parties. Your family's privacy is our top priority.</p>
                 </div>
               </div>
 
@@ -430,7 +430,7 @@ export default async function HomePage() {
                 <Shield className="text-3xl text-blue-600 mr-4 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Encrypted communication</h3>
-                  <p className="text-gray-600">All data is encrypted with bank-level security, ensuring that your family's information stays private.</p>
+                  <p className="text-lg text-gray-600">All data is encrypted with bank-level security, ensuring that your family's information stays private.</p>
                 </div>
               </div>
 
@@ -438,7 +438,7 @@ export default async function HomePage() {
                 <Eye className="text-3xl text-blue-400 mr-4 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Transparent permissions</h3>
-                  <p className="text-gray-600">We explain exactly what data we collect and why, with clear options for parents to control privacy settings.</p>
+                  <p className="text-lg text-gray-600">We explain exactly what data we collect and why, with clear options for parents to control privacy settings.</p>
                 </div>
               </div>
 
@@ -470,7 +470,7 @@ export default async function HomePage() {
               <h3 className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-6">
                 "Protection without punishment."
               </h3>
-              <p className="text-center text-gray-700 text-base md:text-lg">
+              <p className="text-center text-gray-700 text-lg">
                 Our philosophy centers on guiding children to make smart choices online, rather than punishing them for mistakes. We believe in teaching digital responsibility.
               </p>
             </div>

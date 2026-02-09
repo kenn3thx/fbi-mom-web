@@ -133,10 +133,10 @@ export function VideoDemoSection() {
 
                             {/* TEXT BELOW VIDEO */}
                             <div className="mt-4 text-center">
-                                <h3 className="text-base font-semibold text-gray-900">
+                                <h3 className="text-lg font-semibold text-gray-900">
                                     {video.title}
                                 </h3>
-                                <p className="mt-1 text-gray-500">
+                                <p className="text-lg mt-1 text-gray-500">
                                     {video.desc}
                                 </p>
                             </div>

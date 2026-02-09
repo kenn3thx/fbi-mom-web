@@ -112,8 +112,8 @@ export default function AboutUsPage() {
                             <div className="story-card bg-linear-to-br from-purple-50 to-pink-50 p-8">
                                 <div className="text-5xl mb-6">👩‍💻</div>
                                 <h3 className="text-2xl font-bold mb-4">The Problem We Faced</h3>
-                                <p className="text-gray-700 mb-6">FBIMOM was born from a simple question: How can we let our children explore the internet without constant fear? We created this tool to be an extension of a parent’s intuition. We believe that digital safety shouldn't feel like a police state—it should feel like a safety net.</p>
-                                <p className="text-gray-700">FBIMOM watches over your child’s interactions with the same care you do, alerting you only when it truly matters. It is artificial intelligence dedicated to family love.</p>
+                                <p className="text-gray-700 mb-6 text-lg">FBIMOM was born from a simple question: How can we let our children explore the internet without constant fear? We created this tool to be an extension of a parent’s intuition. We believe that digital safety shouldn't feel like a police state—it should feel like a safety net.</p>
+                                <p className="text-gray-700 text-lg">FBIMOM watches over your child’s interactions with the same care you do, alerting you only when it truly matters. It is artificial intelligence dedicated to family love.</p>
                             </div>
                         </div>
 
@@ -121,8 +121,8 @@ export default function AboutUsPage() {
                             <div className="story-card bg-linear-to-br from-blue-50 to-cyan-50 p-8">
                                 <div className="text-5xl mb-6">💡</div>
                                 <h3 className="text-2xl font-bold mb-4">The Solution We Built</h3>
-                                <p className="text-gray-700 mb-6">We didn't just build a monitoring tool; we created a collaborative ecosystem where parents and children work together toward a healthy digital life. FBIMOM is designed as a "Quest & Reward" platform where safety meets fun.</p>
-                                <p className="text-gray-700">Unlike other solutions, FBI Mom focuses on education and communication, not just surveillance. We believe the goal isn't to control every click, but to teach children how to make smart choices online.</p>
+                                <p className="text-gray-700 mb-6 text-lg">We didn't just build a monitoring tool; we created a collaborative ecosystem where parents and children work together toward a healthy digital life. FBIMOM is designed as a "Quest & Reward" platform where safety meets fun.</p>
+                                <p className="text-gray-700 text-lg">Unlike other solutions, FBI Mom focuses on education and communication, not just surveillance. We believe the goal isn't to control every click, but to teach children how to make smart choices online.</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ export default function AboutUsPage() {
             <section id="team" className="py-16 px-4 bg-white">
                 <div className="container mx-auto">
                     <h2 className="text-3xl font-bold text-center mb-4 text-[#655B50]">Meet Our Small Team, Big Vision</h2>
-                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">FBIMOM was born from the collaboration of three passionate creators who believe that parental control shouldn't just be about restrictions. We worked together to build a tool that empowers moms and rewards kids, making daily life easier for everyone, one star at a time.</p>
+                    <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">FBIMOM was born from the collaboration of three passionate creators who believe that parental control shouldn't just be about restrictions. We worked together to build a tool that empowers moms and rewards kids, making daily life easier for everyone, one star at a time.</p>
 
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {team.map((member) => (
@@ -218,12 +218,12 @@ function TeamMemberCard({ member }: { member: any }) {
             </h3>
 
             {/* Role */}
-            <p className={`mt-1 text-sm font-medium ${member.roleColor}`}>
+            <p className={`mt-1 text-lg font-medium ${member.roleColor}`}>
                 {member.role}
             </p>
 
             {/* Bio */}
-            <p className="mt-4 text-sm leading-relaxed text-gray-600">
+            <p className="mt-4 text-lg leading-relaxed text-gray-600">
                 {member.bio}
             </p>
 
