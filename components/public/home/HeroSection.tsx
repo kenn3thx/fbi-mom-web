@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ShieldUser, CheckCircle, Play, Volume2, VolumeOff } from "lucide-react";
+import Image from "next/image";
 
 interface VideoType {
   src: string,
@@ -116,13 +117,44 @@ export default function HeroSection() {
               ))}
             </ul>
 
-            <Link
+            <div className="flex space-x-8 md:space-x-16">
+              <Link
+                href="/get-started"
+                className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
+              >
+                <ShieldUser className="mr-2 h-5 w-5" />
+                Get Started for Free
+              </Link>
+
+              <div
+                className="inline-flex items-center justify-center"
+              >
+                <Image
+                  src={"/uploads/images/donation-icon.gif"}
+                  height={12} width={62}
+                  alt="Donation"
+                  className="rounded-full object-fill mr-1"
+                /> 
+                
+                <span className="text-2xl font-semibold text-stone-400">donation</span>
+              </div>
+            </div>
+
+
+
+            {/* <Link
               href="/get-started"
               className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
             >
-              <ShieldUser className="mr-2 h-5 w-5" />
-              Get Started for Free
-            </Link>
+              <Image 
+                src={"/uploads/images/Buttontransparent_compress-ezgif.com-resize.gif.gif"}
+                height={12} width={36} 
+                alt="Donation"
+                className="rounded-4xl mr-2"
+              /> 
+              Donation
+            </Link> */}
+
           </div>
 
           {/* RIGHT – VIDEO */}
