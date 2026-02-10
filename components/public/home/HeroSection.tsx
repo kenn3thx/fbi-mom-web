@@ -39,6 +39,8 @@ export default function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const [selectedVideo, setSelectedVideo] = useState<VideoType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const userEnabledSoundRef = useRef(false);
+
 
 
   useEffect(() => {
@@ -54,10 +56,12 @@ export default function HeroSection() {
 
     try {
       if (videoEl.paused) {
-        videoEl.muted = true;
+        // videoEl.muted = true;
+        videoEl.muted = !userEnabledSoundRef.current;
+
         await videoEl.play();
         setIsPlaying(true);
-        setIsMuted(true);
+        setIsMuted(videoEl.muted);
       } else {
         videoEl.pause();
         setIsPlaying(false);
@@ -72,8 +76,14 @@ export default function HeroSection() {
     const videoEl = videoRef.current;
     if (!videoEl) return;
 
-    videoEl.muted = !videoEl.muted;
-    setIsMuted(videoEl.muted);
+    const nextMuted = !videoEl.muted;
+
+    videoEl.muted = nextMuted;
+    setIsMuted(nextMuted);
+
+    if (!nextMuted) {
+      userEnabledSoundRef.current = true; // remember user choice
+    }
   };
 
   const handleVideoEnded = () => {
@@ -133,8 +143,8 @@ export default function HeroSection() {
                   height={12} width={62}
                   alt="Donation"
                   className="rounded-full object-fill mr-1"
-                /> 
-                
+                />
+
                 <span className="text-2xl font-semibold text-stone-400">donation</span>
               </div>
             </div>
