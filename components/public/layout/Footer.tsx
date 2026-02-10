@@ -65,11 +65,11 @@ export async function PublicFooter() {
                 </div>
 
                 <div className="pt-8 border-t border-gray-500 flex flex-col md:flex-row justify-center items-center">
-                    <p className="text-gray-200 mb-4 md:mb-0 text-lg">{settings.footerContent || `© ${new Date().getFullYear()} ${settings.siteName}. All rights reserved.`}</p>
+                    <p className="text-gray-200 mb-4 md:mb-0">{settings.footerContent || `© ${new Date().getFullYear()} ${settings.siteName}. All rights reserved.`}</p>
 
                 </div>
 
-                <div className="mt-8 text-center text-gray-200 text-lg">
+                <div className="mt-8 text-center text-gray-200">
                     <p>Legal Disclaimer: FBIMOM is an independent parental control tool. We are not affiliated with, associated with, authorized by, or in any way officially connected to the Federal Bureau of Investigation (FBI) or any government agency. The name "FBI" in FBIMOM is used for creative branding purposes only.</p>
                 </div>
             </div>
