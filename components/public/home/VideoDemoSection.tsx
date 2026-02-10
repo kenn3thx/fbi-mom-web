@@ -102,7 +102,7 @@ export function VideoDemoSection() {
                                 />
 
                                 {/* Overlay */}
-                                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
+                                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/40 via-black/10 to-transparent" />
 
                                 {/* Play Button */}
                                 {
