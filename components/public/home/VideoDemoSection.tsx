@@ -66,7 +66,7 @@ export function VideoDemoSection() {
 
                 {/* Heading */}
                 <div className="mb-16 text-center">
-                    <h2 className="text-4xl font-bold text-gray-900">
+                    <h2 className="text-4xl font-bold text-[#655B50]">
                         Stop Arguing, Start Motivating
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
@@ -133,7 +133,7 @@ export function VideoDemoSection() {
 
                             {/* TEXT BELOW VIDEO */}
                             <div className="mt-4 text-center">
-                                <h3 className="text-lg font-semibold text-gray-900">
+                                <h3 className="text-lg font-semibold text-[#655B50]">
                                     {video.title}
                                 </h3>
                                 <p className="text-lg mt-1 text-gray-600">

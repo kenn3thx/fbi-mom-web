@@ -56,7 +56,6 @@ export default function HeroSection() {
 
     try {
       if (videoEl.paused) {
-        // videoEl.muted = true;
         videoEl.muted = !userEnabledSoundRef.current;
 
         await videoEl.play();
