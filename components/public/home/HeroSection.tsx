@@ -122,7 +122,6 @@ export default function HeroSection() {
                 href="/get-started"
                 className="inline-flex items-center justify-center rounded-full btn-primary px-8 py-4 my-8 text-lg font-semibold text-white shadow-lg shadow-purple-600/30 transition hover:bg-purple-700"
               >
-                <ShieldUser className="mr-2 h-5 w-5" />
                 Try it now
               </Link>
 
