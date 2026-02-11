@@ -121,7 +121,7 @@ export default function HeroSection() {
                 "Assign Daily Tasks",
                 "Earn Star Credits",
                 "Trade Stars for Fun",
-                "100% Free Forever",
+                "100% Free",
               ].map((item, i) => (
                 <li key={i} className="flex items-start text-gray-700">
                   <CheckCircle className="mr-3 h-5 w-5 text-green-500" />
