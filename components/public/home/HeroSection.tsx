@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ShieldUser, CheckCircle, Play, Volume2, VolumeOff } from "lucide-react";
+import { CheckCircle, Play, Volume2, VolumeOff } from "lucide-react";
 import Image from "next/image";
 
 interface VideoType {
@@ -30,6 +30,10 @@ const videos: VideoType[] = [
   {
     src: "/uploads/video/video_intro_hero_jp.mp4",
     poster: "/uploads/images/poster_video_intro_hero_jp.webp",
+  },
+  {
+    src: "/uploads/video/video_intro_hero_af.mp4",
+    poster: "/uploads/images/poster_video_intro_hero_af.webp",
   }
 ];
 

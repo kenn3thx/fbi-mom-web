@@ -46,19 +46,19 @@ export default async function HomePage() {
       title: "Moms with kids aged 6–16",
       description:
         "Perfect for children starting to explore the digital world up to teenagers needing responsible boundaries.",
-      image: "/uploads/images/b3d3f889-ae00-4683-ab9b-da23d31836b0.jpeg",
+      image: "/uploads/images/Finalvideo_compress-ezgif.com-resize 180ko.gif",
     },
     {
       title: "First smartphone families",
       description:
         "Essential for families giving kids their first smartphone, establishing healthy habits from day one.",
-      image: "/uploads/images/photo_6061955376480980273_m.jpg",
+      image: "/uploads/images/finalvideo1_compress-GIF.gif",
     },
     {
       title: "Worried parents",
       description:
         "For parents concerned about online dangers but unsure how to protect their children effectively.",
-      image: "/uploads/images/photo_6061955376480980274_m.jpg",
+      image: "/uploads/images/FinalVideo_1_compress-GIF.gif",
     },
   ];
 
@@ -387,7 +387,12 @@ export default async function HomePage() {
                 key={index}
                 className="flex flex-col items-center text-center rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-shadow"
               >
-                <div className="relative w-40 h-24 mb-5">
+                <div className="relative
+                  mx-auto mb-5
+                  w-full
+                  max-w-xs sm:max-w-3xs md:max-w-sm
+                  aspect-2/1
+                ">
                   <Image
                     src={item.image}
                     alt={item.title}
