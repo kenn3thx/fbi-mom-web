@@ -38,6 +38,10 @@ const videos: VideoType[] = [
   {
     src: "/uploads/video/video_intro_hero_us.mp4",
     poster: "/uploads/images/poster_video_intro_hero_us.webp",
+  },
+  {
+    src: "/uploads/video/video_intro_hero_oc.mp4",
+    poster: "/uploads/images/poster_video_intro_hero_oc.webp",
   }
 ];
 
