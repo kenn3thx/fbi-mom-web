@@ -88,6 +88,11 @@ export default function ContactForm() {
 
 	const isDisabled = loading || !captchaToken;
 
+	console.log(
+		"=== CHECK RECAPTCHA KEY ===",
+		process.env.NEXT_PUBLIC_RECAPTCHA_KEY,
+	);
+
 	return (
 		<form onSubmit={handleSubmit} className='space-y-6'>
 			{/* Email */}
